@@ -1,36 +1,140 @@
-## 📚 Sistema de Gestão de Bibliotecas ##
+# 📚 LibraryFlow
 
-Este projeto foi idealizado e desenvolvido para o curso de Desenvolvimento de Sistemas no SENAI.
+Sistema de gestão de bibliotecas desenvolvido em Python para gerenciamento de usuários, acervo e circulação de livros.
 
-Se trata da implementação de um sistema de gerenciamento de biblioteca comunitária com funcionalidades de cadastro de usuários, login, cadastro e empréstimo de livros. O sistema armazena as informações de usuários e livros em arquivos CSV e oferece uma interface interativa no terminal para facilitar o gerenciamento dos dados.
+O projeto implementa autenticação de usuários, cadastro e controle de livros, empréstimos e devoluções, utilizando persistência de dados em arquivos CSV e princípios de Programação Orientada a Objetos (POO). Seu objetivo é demonstrar a aplicação prática de conceitos de desenvolvimento de software, manipulação de arquivos, segurança de dados e implementação de regras de negócio.
 
-## 🚀 Funcionalidades ##
+---
 
-### 1. Cadastro e Login de Usuários
+## 🚀 Funcionalidades
 
-- **Criação de usuário**: Permite a criação de novos usuários com nome, e-mail e senha.<br>
-- *A senha é armazenada de forma segura utilizando SHA-256.*
+### 👤 Gestão de Usuários
 
-**Login de usuário**: Usuários podem fazer login fornecendo seu e-mail e senha.
+* Cadastro de novos usuários
+* Autenticação por e-mail e senha
+* Validação de credenciais de acesso
+* Armazenamento seguro de senhas utilizando SHA-256
 
-### 2. Gerenciamento de Livros
+### 📖 Gestão do Acervo
 
-- **Listar livros**: Exibe uma lista de livros cadastrados na biblioteca.
+* Cadastro de livros
+* Listagem completa dos exemplares cadastrados
+* Controle de disponibilidade dos livros
+* Identificação única para cada registro
 
-- **Cadastrar livro**: Permite o cadastro de novos livros na biblioteca com informações como nome, autor e ano de publicação.
+### 🔄 Controle de Empréstimos
 
-- **Emprestar livro**: Permite que um livro seja emprestado a um cliente, registrando o nome do cliente e a data/hora do empréstimo.
+* Registro de empréstimos de livros
+* Associação de livros aos usuários
+* Registro automático de data e horário da operação
+* Atualização de status do exemplar
 
-- **Devolver livro**: Permite que um livro seja devolvido, marcando-o como "disponível".
+### ↩️ Controle de Devoluções
 
-## 🛠 Arquivos Utilizados
+* Registro de devolução de livros
+* Atualização automática da disponibilidade
+* Remoção do histórico ativo de empréstimo
 
-- **usuarios.csv**: Armazena os dados de usuários cadastrados, como nome, e-mail e senha (hash).
+---
 
-- **livros.csv**: Armazena os dados dos livros cadastrados, incluindo ID, nome, autor, ano de publicação e status (disponível/emprestado).
+## 🛠 Tecnologias Utilizadas
 
-## 📌 Requisitos
+* Python 3
+* Programação Orientada a Objetos (POO)
+* CSV (Persistência de Dados)
+* Hashlib (SHA-256)
+* Datetime
+* OS
+* Time
 
-- Python 3.x
+---
 
-- Bibliotecas padrão: `csv`, `os`, `time`, `datetime`, `hashlib`
+## 📁 Estrutura do Projeto
+
+```txt
+library-management-system/
+├── main.py
+├── usuarios.csv
+├── livros.csv
+└── README.md
+```
+
+### Descrição dos Arquivos
+
+| Arquivo      | Descrição                                                            |
+| ------------ | -------------------------------------------------------------------- |
+| main.py      | Aplicação principal contendo as regras de negócio e fluxo do sistema |
+| usuarios.csv | Base de dados dos usuários cadastrados                               |
+| livros.csv   | Base de dados do acervo e movimentações                              |
+| README.md    | Documentação do projeto                                              |
+
+---
+
+## 📂 Estrutura dos Dados
+
+### usuarios.csv
+
+Armazena os dados dos usuários cadastrados:
+
+* Nome
+* E-mail
+* Senha criptografada (SHA-256)
+
+### livros.csv
+
+Armazena os dados do acervo:
+
+* ID do Livro
+* Título
+* Autor
+* Ano de Publicação
+* Status (Disponível ou Emprestado)
+* Histórico de Empréstimos
+
+---
+
+## 🔒 Segurança
+
+As senhas dos usuários não são armazenadas em texto puro.
+
+O sistema utiliza o algoritmo SHA-256 para gerar hashes criptográficos antes da gravação dos dados, garantindo maior segurança no armazenamento das credenciais.
+
+---
+
+## 🎯 Objetivos do Projeto
+
+* Aplicar conceitos de Programação Orientada a Objetos
+* Implementar autenticação de usuários
+* Desenvolver regras de negócio para gestão de bibliotecas
+* Trabalhar com persistência de dados em arquivos CSV
+* Consolidar conhecimentos em desenvolvimento Python
+
+---
+
+## 📈 Possíveis Evoluções
+
+* Migração para banco de dados SQLite
+* Desenvolvimento de interface web
+* Dashboard administrativo
+* Sistema de pesquisa avançada
+* Relatórios de empréstimos e devoluções
+* Controle de multas e reservas
+* API REST para integração com outros sistemas
+
+---
+
+## 📌 Status do Projeto
+
+**Versão Atual:** v1.0
+
+✅ Funcionalidades principais implementadas
+
+✅ Sistema operacional e funcional
+
+🚧 Planejada evolução para versão web com banco de dados relacional
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por Arthur Almeida como projeto de estudos e prática em desenvolvimento de software utilizando Python.
