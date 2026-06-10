@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibraryFlow | Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <main class="dashboard-page">
+
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span>📚</span>
+                <h2>LibraryFlow</h2>
+            </div>
+
+            <nav>
+                <a href="/dashboard" class="active">Dashboard</a>
+                <a href="#">Livros</a>
+                <a href="#">Empréstimos</a>
+                <a href="#">Usuários</a>
+                <a href="/">Sair</a>
+            </nav>
+        </aside>
+
+        <section class="dashboard-content">
+
+            <header class="dashboard-header">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Visão geral da biblioteca e controle do acervo</p>
+                </div>
+            </header>
+
+            <section class="cards">
+                <div class="card">
+                    <span>📚</span>
+                    <p>Total de Livros</p>
+                    <h2>124</h2>
+                </div>
+
+                <div class="card">
+                    <span>✅</span>
+                    <p>Disponíveis</p>
+                    <h2>97</h2>
+                </div>
+
+                <div class="card">
+                    <span>📕</span>
+                    <p>Emprestados</p>
+                    <h2>27</h2>
+                </div>
+
+                <div class="card">
+                    <span>👤</span>
+                    <p>Usuários</p>
+                    <h2>41</h2>
+                </div>
+            </section>
+
+            <section class="panel">
+                <div class="panel-header">
+                    <h2>Movimentações Recentes</h2>
+                    <button>Novo Empréstimo</button>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Livro</th>
+                            <th>Usuário</th>
+                            <th>Status</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Clean Code</td>
+                            <td>Ana Souza</td>
+                            <td><span class="badge borrowed">Emprestado</span></td>
+                            <td>10/06/2026</td>
+                        </tr>
+                        <tr>
+                            <td>Python Fluente</td>
+                            <td>Carlos Lima</td>
+                            <td><span class="badge returned">Devolvido</span></td>
+                            <td>09/06/2026</td>
+                        </tr>
+                        <tr>
+                            <td>Engenharia de Software</td>
+                            <td>Marina Alves</td>
+                            <td><span class="badge borrowed">Emprestado</span></td>
+                            <td>08/06/2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
