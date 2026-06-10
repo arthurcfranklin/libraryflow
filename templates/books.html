@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibraryFlow | Livros</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <main class="dashboard-page">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span>📚</span>
+                <h2>LibraryFlow</h2>
+            </div>
+
+            <nav>
+                <a href="/dashboard">Dashboard</a>
+                <a href="/books" class="active">Livros</a>
+                <a href="/loans">Empréstimos</a>
+                <a href="/users">Usuários</a>
+                <a href="/">Sair</a>
+            </nav>
+        </aside>
+
+        <section class="dashboard-content">
+            <header class="dashboard-header">
+                <div>
+                    <h1>Gestão de Acervo</h1>
+                    <p>Cadastre, visualize e gerencie os livros da biblioteca</p>
+                </div>
+
+                <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                    🌙
+                </button>
+            </header>
+
+            <section class="panel">
+                <div class="panel-header">
+                    <h2>Livros Cadastrados</h2>
+                    <button>Novo Livro</button>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Autor</th>
+                            <th>Ano</th>
+                            <th>Categoria</th>
+                            <th>Exemplares</th>
+                            <th>Status</th>
+                            <th>Opções</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Clean Code</td>
+                            <td>Robert C. Martin</td>
+                            <td>2008</td>
+                            <td>Programação</td>
+                            <td>5</td>
+                            <td><span class="badge returned">Disponível</span></td>
+                            <td>
+                                <button class="action-menu-btn" aria-label="Opções do livro">
+                                   ⋮
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Python Fluente</td>
+                            <td>Luciano Ramalho</td>
+                            <td>2015</td>
+                            <td>Programação</td>
+                            <td>2</td>
+                            <td><span class="badge borrowed">Emprestado</span></td>
+                        </tr>
+                        <tr>
+                            <td>Engenharia de Software</td>
+                            <td>Ian Sommerville</td>
+                            <td>2011</td>
+                            <td>Tecnologia</td>
+                            <td>8</td>
+                            <td><span class="badge returned">Disponível</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </main>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

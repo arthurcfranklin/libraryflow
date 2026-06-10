@@ -23,3 +23,10 @@ def dashboard(request: Request):
         request=request,
         name="dashboard.html"
     )
+
+@app.get("/books")
+def books(request: Request):
+    return templates.TemplateResponse(
+        request=request,
+        name="books.html"
+    )
