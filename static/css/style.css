@@ -484,3 +484,90 @@ tbody tr:hover {
 tbody tr:last-child td {
     border-bottom: none;
 }
+
+/* LIGHT MODE SIDEBAR REFINEMENT */
+
+.sidebar {
+    background: #fffaf1;
+    color: var(--text);
+    border-right: 1px solid var(--border);
+}
+
+.sidebar-brand span {
+    background: #eadcc8;
+}
+
+.sidebar-brand h2 {
+    color: var(--text);
+}
+
+.sidebar nav a {
+    color: var(--muted);
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+/* DARK MODE SIDEBAR */
+
+body.dark-mode .sidebar {
+    background: #211b16;
+    color: #fffaf1;
+    border-right: 1px solid #3a2f26;
+}
+
+body.dark-mode .sidebar-brand span {
+    background: #3a2f26;
+}
+
+body.dark-mode .sidebar-brand h2 {
+    color: #fffaf1;
+}
+
+body.dark-mode .sidebar nav a {
+    color: #cbbda9;
+}
+
+body.dark-mode .sidebar nav a:hover,
+body.dark-mode .sidebar nav a.active {
+    background: #2f6f4e;
+    color: #ffffff;
+}
+
+/* DARK MODE BUTTONS */
+
+body.dark-mode button,
+body.dark-mode .btn,
+body.dark-mode .panel-header button {
+    background: #8b5e34;
+    color: #fffaf1;
+}
+
+body.dark-mode button:hover,
+body.dark-mode .btn:hover,
+body.dark-mode .panel-header button:hover {
+    background: linear-gradient(
+    135deg,
+    #8b5e34 0%,
+    #6d4a2a 100%
+);
+}
+
+/* DARK MODE HOVER REFINEMENT */
+
+body.dark-mode .theme-toggle:hover {
+    background: #a06d3d;
+}
+
+body.dark-mode .sidebar nav a:hover,
+body.dark-mode .sidebar nav a.active {
+    background: #8b5e34;
+    color: #fffaf1;
+}
+
+body.dark-mode .panel-header button:hover {
+    background: #a06d3d;
+}
