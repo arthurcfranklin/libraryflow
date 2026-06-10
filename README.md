@@ -1,8 +1,8 @@
 # 📚 LibraryFlow
 
-Sistema de gestão de bibliotecas desenvolvido em Python para gerenciamento de usuários, acervo e circulação de livros.
+Sistema web de gestão de bibliotecas desenvolvido para gerenciamento de usuários, acervo e circulação de livros.
 
-O projeto implementa autenticação de usuários, cadastro e controle de livros, empréstimos e devoluções, utilizando persistência de dados em arquivos CSV e princípios de Programação Orientada a Objetos (POO). Seu objetivo é demonstrar a aplicação prática de conceitos de desenvolvimento de software, manipulação de arquivos, segurança de dados e implementação de regras de negócio.
+O projeto tem como objetivo modernizar uma aplicação originalmente desenvolvida em terminal, evoluindo-a para uma solução web completa utilizando Python, FastAPI e SQLite. A plataforma permite autenticação de usuários, gerenciamento de livros, controle de empréstimos e devoluções, além de fornecer uma interface intuitiva para administração do acervo.
 
 ---
 
@@ -10,131 +10,142 @@ O projeto implementa autenticação de usuários, cadastro e controle de livros,
 
 ### 👤 Gestão de Usuários
 
-* Cadastro de novos usuários
-* Autenticação por e-mail e senha
-* Validação de credenciais de acesso
-* Armazenamento seguro de senhas utilizando SHA-256
+* Cadastro de usuários
+* Login seguro com autenticação
+* Criptografia de senhas utilizando SHA-256
+* Controle de acesso ao sistema
 
-### 📖 Gestão do Acervo
+### 📚 Gestão de Acervo
 
 * Cadastro de livros
-* Listagem completa dos exemplares cadastrados
-* Controle de disponibilidade dos livros
-* Identificação única para cada registro
+* Edição de informações
+* Exclusão de registros
+* Controle de disponibilidade
 
-### 🔄 Controle de Empréstimos
+### 🔄 Empréstimos
 
-* Registro de empréstimos de livros
-* Associação de livros aos usuários
-* Registro automático de data e horário da operação
-* Atualização de status do exemplar
+* Registro de empréstimos
+* Associação entre usuários e livros
+* Registro automático de data e horário
+* Atualização automática do status dos exemplares
 
-### ↩️ Controle de Devoluções
+### ↩️ Devoluções
 
-* Registro de devolução de livros
+* Registro de devoluções
 * Atualização automática da disponibilidade
-* Remoção do histórico ativo de empréstimo
+* Histórico de movimentações
+
+### 📊 Dashboard
+
+* Total de livros cadastrados
+* Livros disponíveis
+* Livros emprestados
+* Indicadores operacionais
 
 ---
 
 ## 🛠 Tecnologias Utilizadas
 
-* Python 3
-* Programação Orientada a Objetos (POO)
-* CSV (Persistência de Dados)
-* Hashlib (SHA-256)
-* Datetime
-* OS
-* Time
+### Backend
+
+* Python 3.12+
+* FastAPI
+* SQLite
+* SQLAlchemy
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript
+
+### Segurança
+
+* SHA-256
+* Validação de dados
+* Controle de autenticação
 
 ---
 
 ## 📁 Estrutura do Projeto
 
 ```txt
-library-management-system/
+libraryflow/
+├── app/
+│   ├── routes/
+│   ├── models/
+│   ├── services/
+│   ├── database/
+│   └── templates/
+│
+├── static/
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+├── database/
+│   └── libraryflow.db
+│
 ├── main.py
-├── usuarios.csv
-├── livros.csv
+├── requirements.txt
 └── README.md
 ```
 
-### Descrição dos Arquivos
-
-| Arquivo      | Descrição                                                            |
-| ------------ | -------------------------------------------------------------------- |
-| main.py      | Aplicação principal contendo as regras de negócio e fluxo do sistema |
-| usuarios.csv | Base de dados dos usuários cadastrados                               |
-| livros.csv   | Base de dados do acervo e movimentações                              |
-| README.md    | Documentação do projeto                                              |
-
 ---
 
-## 📂 Estrutura dos Dados
+## 📌 Funcionalidades Planejadas
 
-### usuarios.csv
-
-Armazena os dados dos usuários cadastrados:
-
-* Nome
-* E-mail
-* Senha criptografada (SHA-256)
-
-### livros.csv
-
-Armazena os dados do acervo:
-
-* ID do Livro
-* Título
-* Autor
-* Ano de Publicação
-* Status (Disponível ou Emprestado)
-* Histórico de Empréstimos
-
----
-
-## 🔒 Segurança
-
-As senhas dos usuários não são armazenadas em texto puro.
-
-O sistema utiliza o algoritmo SHA-256 para gerar hashes criptográficos antes da gravação dos dados, garantindo maior segurança no armazenamento das credenciais.
+* Dashboard administrativo
+* Pesquisa avançada de livros
+* Histórico completo de empréstimos
+* Controle de reservas
+* Gestão de multas
+* Controle de perfis de acesso
+* API REST documentada com Swagger
 
 ---
 
 ## 🎯 Objetivos do Projeto
 
-* Aplicar conceitos de Programação Orientada a Objetos
-* Implementar autenticação de usuários
-* Desenvolver regras de negócio para gestão de bibliotecas
-* Trabalhar com persistência de dados em arquivos CSV
-* Consolidar conhecimentos em desenvolvimento Python
+* Aplicar conceitos de desenvolvimento web com Python
+* Implementar arquitetura em camadas
+* Utilizar banco de dados relacional
+* Desenvolver uma interface moderna e responsiva
+* Demonstrar boas práticas de desenvolvimento de software
 
 ---
 
-## 📈 Possíveis Evoluções
+## 📈 Evolução do Projeto
 
-* Migração para banco de dados SQLite
-* Desenvolvimento de interface web
+### Versão 1.0
+
+Aplicação CLI utilizando:
+
+* Python
+* Programação Orientada a Objetos
+* Arquivos CSV
+
+### Versão 2.0 (Atual)
+
+Migração para arquitetura web utilizando:
+
+* FastAPI
+* SQLite
+* HTML/CSS/JavaScript
 * Dashboard administrativo
-* Sistema de pesquisa avançada
-* Relatórios de empréstimos e devoluções
-* Controle de multas e reservas
-* API REST para integração com outros sistemas
 
 ---
 
-## 📌 Status do Projeto
+## 📌 Status
 
-**Versão Atual:** v1.0
+🚧 Em desenvolvimento
 
-✅ Funcionalidades principais implementadas
-
-✅ Sistema operacional e funcional
-
-🚧 Planejada evolução para versão web com banco de dados relacional
+Atualmente em processo de migração da versão CLI para uma arquitetura web moderna.
 
 ---
 
 ## 👨‍💻 Autor
 
-Desenvolvido por Arthur Almeida como projeto de estudos e prática em desenvolvimento de software utilizando Python.
+Arthur Almeida
+
+Projeto desenvolvido para evolução prática em desenvolvimento de software, back-end Python e aplicações web.
