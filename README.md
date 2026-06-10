@@ -1,7 +1,7 @@
 # 📚 LibraryFlow
 
 ![Python](https://img.shields.io/badge/Python-3.12+-blue?logo=python)
-![FastAPI](https://img.shields.io/badge/FastAPI-Web_App-009688?logo=fastapi)
+![FastAPI](https://img.shields.io/badge/FastAPI-Web%20App-009688?logo=fastapi)
 ![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite)
 ![Status](https://img.shields.io/badge/Status-v2.1.0--beta-orange)
 
@@ -9,107 +9,116 @@ Sistema web de gestão de bibliotecas desenvolvido com Python, FastAPI e SQLite 
 
 **Versão Atual:** v2.1.0-beta
 
-O projeto foi originalmente desenvolvido como uma aplicação de terminal (CLI) durante o curso de Desenvolvimento de Sistemas no SENAI e atualmente está sendo modernizado para uma arquitetura web completa, com dashboard administrativo, interface responsiva, sistema de temas e banco de dados relacional.
+O LibraryFlow surgiu a partir da modernização de uma aplicação acadêmica originalmente desenvolvida em terminal (CLI), sendo posteriormente reestruturado para uma arquitetura web completa utilizando FastAPI, SQLite e uma interface administrativa moderna.
+
+O projeto tem como objetivo consolidar conhecimentos em desenvolvimento web, arquitetura de software, banco de dados relacionais e construção de interfaces responsivas.
 
 ---
 
-## 🚀 Visão Geral
+# 📖 Visão Geral
 
-O LibraryFlow tem como objetivo centralizar o gerenciamento de bibliotecas por meio de uma plataforma intuitiva e moderna, permitindo o controle de usuários, livros, empréstimos e devoluções em um único ambiente.
+O LibraryFlow centraliza o gerenciamento de bibliotecas em uma única plataforma, permitindo controlar usuários, acervo e movimentações de forma simples e organizada.
 
-Além de servir como sistema de gestão, o projeto também representa a evolução prática de conhecimentos em desenvolvimento web, arquitetura de software, banco de dados e experiência do usuário.
+Entre os principais recursos estão:
+
+* Gestão de usuários
+* Controle de acervo
+* Registro de empréstimos
+* Controle de devoluções
+* Dashboard administrativo
+* Temas claro e escuro
+* Interface responsiva
 
 ---
 
-## 📸 Screenshots
+# 📸 Screenshots
 
-### 🔐 Tela de Login
+## 🔐 Tela de Login
 
 ![Login](static/images/login.png)
 
-### ☀️ Dashboard — Tema Claro
+## ☀️ Dashboard — Tema Claro
 
 ![Dashboard Light](static/images/dashboard-light.png)
 
-### 🌙 Dashboard — Tema Escuro
+## 🌙 Dashboard — Tema Escuro
 
 ![Dashboard Dark](static/images/dashboard-dark.png)
 
 ---
 
-## ✨ Funcionalidades
+# ✨ Funcionalidades
 
-### 👤 Gestão de Usuários
+## 👤 Gestão de Usuários
 
 * Cadastro de usuários
 * Autenticação de acesso
 * Validação de credenciais
-* Controle de permissões (planejado)
+* Controle de permissões
 
-### 📚 Gestão de Acervo
+## 📚 Gestão de Acervo
 
 * Cadastro de livros
 * Atualização de registros
 * Controle de disponibilidade
 * Organização do catálogo
 
-### 🔄 Empréstimos e Devoluções
+## 🔄 Empréstimos e Devoluções
 
 * Registro de empréstimos
 * Associação entre usuários e livros
 * Controle de devoluções
-* Atualização automática de status
+* Atualização automática de disponibilidade
 
-### 📊 Dashboard Administrativo
+## 📊 Dashboard Administrativo
 
 * Total de livros cadastrados
 * Livros disponíveis
 * Livros emprestados
-* Quantidade de usuários
-* Visualização centralizada de movimentações
+* Usuários registrados
+* Resumo operacional da biblioteca
 
-### 🎨 Interface Moderna
+## 🎨 Interface Moderna
 
 * Layout responsivo
 * Tema claro
 * Tema escuro
-* Experiência focada em usabilidade
+* Alternância dinâmica de tema
 
 ---
 
-## 🛠 Tecnologias Utilizadas
+# 🛠 Tecnologias Utilizadas
 
-### Backend
+## Backend
 
 * Python 3.12+
 * FastAPI
 * SQLAlchemy
 * SQLite
 
-### Frontend
+## Frontend
 
 * HTML5
 * CSS3
 * JavaScript
 
-### Segurança
+## Controle de Versão
 
-* SHA-256
-* Validação de dados
-* Controle de autenticação
+* Git
+* GitHub
 
 ---
 
-## 📁 Estrutura do Projeto
+# 📁 Estrutura do Projeto
 
 ```text
 libraryflow/
 │
 ├── app/
-│   ├── database/
 │   ├── models/
 │   ├── routes/
-│   └── services/
+│   ├── services/
+│   └── database/
 │
 ├── static/
 │   ├── css/
@@ -117,12 +126,10 @@ libraryflow/
 │   └── images/
 │
 ├── templates/
-│   ├── login.html
-│   └── dashboard.html
 │
 ├── database/
+│   └── libraryflow.db
 │
-├── legacy_v1.py
 ├── main.py
 ├── requirements.txt
 └── README.md
@@ -130,79 +137,57 @@ libraryflow/
 
 ---
 
-## 🎯 Objetivos do Projeto
+# 🎯 Objetivos do Projeto
 
-* Evoluir uma aplicação CLI para uma arquitetura web moderna
-* Aplicar conceitos de desenvolvimento web com Python
-* Implementar banco de dados relacional
-* Desenvolver interface administrativa responsiva
-* Consolidar boas práticas de desenvolvimento de software
+* Aplicar conceitos modernos de desenvolvimento web
+* Desenvolver APIs utilizando FastAPI
+* Utilizar banco de dados relacional
+* Criar interfaces modernas e responsivas
+* Consolidar conhecimentos em backend e frontend
+* Demonstrar boas práticas de desenvolvimento de software
 
 ---
 
-## 🗺 Roadmap
+# 🗺 Roadmap
 
-### ✅ Concluído
+## ✅ Concluído
 
-* Estrutura inicial do projeto
-* Migração da arquitetura CLI
-* Implementação do FastAPI
+* Estruturação da arquitetura web
+* Interface de login
 * Dashboard administrativo
-* Sistema de temas (claro e escuro)
+* Sistema de temas claro e escuro
 * Organização modular do projeto
+* Documentação técnica inicial
 
-### 🚧 Em Desenvolvimento
+## 🚧 Em Desenvolvimento
 
+* Cadastro de usuários
 * Cadastro de livros
-* Gestão de usuários
 * Controle de empréstimos
-* Integração completa com SQLite
-* Persistência de dados
+* Persistência completa em SQLite
+* Integração das regras de negócio
 
-### 🔮 Futuro
+## 🔮 Futuro
 
-* Pesquisa avançada de livros
 * Histórico completo de movimentações
 * Controle de multas
-* Perfis de acesso
+* Controle de perfis de acesso
+* Pesquisa avançada de livros
 * API REST documentada com Swagger
 * Relatórios administrativos
 
 ---
 
-## 📈 Evolução do Projeto
+# 📊 Status
 
-### Versão 1.0
+🟡 Em desenvolvimento ativo
 
-Aplicação CLI desenvolvida utilizando:
-
-* Python
-* Programação Orientada a Objetos
-* Manipulação de arquivos CSV
-
-### Versão 2.0 (Atual)
-
-Migração para aplicação web utilizando:
-
-* FastAPI
-* SQLite
-* HTML, CSS e JavaScript
-* Dashboard administrativo
-* Sistema de temas
-* Estrutura modular
+Atualmente o projeto encontra-se em evolução contínua, com foco na implementação dos módulos de negócio e integração completa com banco de dados.
 
 ---
 
-## 📌 Status
-
-🚧 Em desenvolvimento ativo
-
-O projeto encontra-se em processo de evolução da versão CLI para uma aplicação web completa, com foco em arquitetura moderna, experiência do usuário e gerenciamento eficiente de bibliotecas.
-
----
-
-## 👨‍💻 Autor
+# 👨‍💻 Autor
 
 **Arthur Almeida**
 
-Projeto desenvolvido para evolução prática em desenvolvimento de software, Python, banco de dados e aplicações web modernas.
+Projeto desenvolvido para evolução prática em desenvolvimento de software, banco de dados e aplicações web modernas.
