@@ -1,46 +1,78 @@
 # 📚 LibraryFlow
 
-Sistema web de gestão de bibliotecas desenvolvido para gerenciamento de usuários, acervo e circulação de livros.
+Sistema web de gestão de bibliotecas desenvolvido com Python, FastAPI e SQLite para gerenciamento de usuários, acervo, empréstimos e devoluções.
 
-O projeto tem como objetivo modernizar uma aplicação originalmente desenvolvida em terminal, evoluindo-a para uma solução web completa utilizando Python, FastAPI e SQLite. A plataforma permite autenticação de usuários, gerenciamento de livros, controle de empréstimos e devoluções, além de fornecer uma interface intuitiva para administração do acervo.
+O projeto foi originalmente desenvolvido como uma aplicação de terminal (CLI) durante o curso de Desenvolvimento de Sistemas no SENAI e atualmente está sendo modernizado para uma arquitetura web completa, com dashboard administrativo, interface responsiva, sistema de temas e banco de dados relacional.
 
 ---
 
-## 🚀 Funcionalidades
+## 🚀 Visão Geral
+
+O LibraryFlow tem como objetivo centralizar o gerenciamento de bibliotecas por meio de uma plataforma intuitiva e moderna, permitindo o controle de usuários, livros, empréstimos e devoluções em um único ambiente.
+
+Além de servir como sistema de gestão, o projeto também representa a evolução prática de conhecimentos em desenvolvimento web, arquitetura de software, banco de dados e experiência do usuário.
+
+---
+
+## 📸 Screenshots
+
+### 🔐 Tela de Login
+
+> Adicione aqui a screenshot da tela de login.
+
+![Login](static/images/login.png)
+
+### ☀️ Dashboard — Tema Claro
+
+> Adicione aqui a screenshot do dashboard em tema claro.
+
+![Dashboard Light](static/images/dashboard-light.png)
+
+### 🌙 Dashboard — Tema Escuro
+
+> Adicione aqui a screenshot do dashboard em tema escuro.
+
+![Dashboard Dark](static/images/dashboard-dark.png)
+
+---
+
+## ✨ Funcionalidades
 
 ### 👤 Gestão de Usuários
 
 * Cadastro de usuários
-* Login seguro com autenticação
-* Criptografia de senhas utilizando SHA-256
-* Controle de acesso ao sistema
+* Autenticação de acesso
+* Validação de credenciais
+* Controle de permissões (planejado)
 
 ### 📚 Gestão de Acervo
 
 * Cadastro de livros
-* Edição de informações
-* Exclusão de registros
+* Atualização de registros
 * Controle de disponibilidade
+* Organização do catálogo
 
-### 🔄 Empréstimos
+### 🔄 Empréstimos e Devoluções
 
 * Registro de empréstimos
 * Associação entre usuários e livros
-* Registro automático de data e horário
-* Atualização automática do status dos exemplares
+* Controle de devoluções
+* Atualização automática de status
 
-### ↩️ Devoluções
-
-* Registro de devoluções
-* Atualização automática da disponibilidade
-* Histórico de movimentações
-
-### 📊 Dashboard
+### 📊 Dashboard Administrativo
 
 * Total de livros cadastrados
 * Livros disponíveis
 * Livros emprestados
-* Indicadores operacionais
+* Quantidade de usuários
+* Visualização centralizada de movimentações
+
+### 🎨 Interface Moderna
+
+* Layout responsivo
+* Tema claro
+* Tema escuro
+* Experiência focada em usabilidade
 
 ---
 
@@ -50,8 +82,8 @@ O projeto tem como objetivo modernizar uma aplicação originalmente desenvolvid
 
 * Python 3.12+
 * FastAPI
-* SQLite
 * SQLAlchemy
+* SQLite
 
 ### Frontend
 
@@ -69,23 +101,27 @@ O projeto tem como objetivo modernizar uma aplicação originalmente desenvolvid
 
 ## 📁 Estrutura do Projeto
 
-```txt
+```text
 libraryflow/
+│
 ├── app/
-│   ├── routes/
-│   ├── models/
-│   ├── services/
 │   ├── database/
-│   └── templates/
+│   ├── models/
+│   ├── routes/
+│   └── services/
 │
 ├── static/
 │   ├── css/
 │   ├── js/
 │   └── images/
 │
-├── database/
-│   └── libraryflow.db
+├── templates/
+│   ├── login.html
+│   └── dashboard.html
 │
+├── database/
+│
+├── legacy_v1.py
 ├── main.py
 ├── requirements.txt
 └── README.md
@@ -93,25 +129,43 @@ libraryflow/
 
 ---
 
-## 📌 Funcionalidades Planejadas
+## 🎯 Objetivos do Projeto
 
-* Dashboard administrativo
-* Pesquisa avançada de livros
-* Histórico completo de empréstimos
-* Controle de reservas
-* Gestão de multas
-* Controle de perfis de acesso
-* API REST documentada com Swagger
+* Evoluir uma aplicação CLI para uma arquitetura web moderna
+* Aplicar conceitos de desenvolvimento web com Python
+* Implementar banco de dados relacional
+* Desenvolver interface administrativa responsiva
+* Consolidar boas práticas de desenvolvimento de software
 
 ---
 
-## 🎯 Objetivos do Projeto
+## 🗺 Roadmap
 
-* Aplicar conceitos de desenvolvimento web com Python
-* Implementar arquitetura em camadas
-* Utilizar banco de dados relacional
-* Desenvolver uma interface moderna e responsiva
-* Demonstrar boas práticas de desenvolvimento de software
+### ✅ Concluído
+
+* Estrutura inicial do projeto
+* Migração da arquitetura CLI
+* Implementação do FastAPI
+* Dashboard administrativo
+* Sistema de temas (claro e escuro)
+* Organização modular do projeto
+
+### 🚧 Em Desenvolvimento
+
+* Cadastro de livros
+* Gestão de usuários
+* Controle de empréstimos
+* Integração completa com SQLite
+* Persistência de dados
+
+### 🔮 Futuro
+
+* Pesquisa avançada de livros
+* Histórico completo de movimentações
+* Controle de multas
+* Perfis de acesso
+* API REST documentada com Swagger
+* Relatórios administrativos
 
 ---
 
@@ -119,33 +173,35 @@ libraryflow/
 
 ### Versão 1.0
 
-Aplicação CLI utilizando:
+Aplicação CLI desenvolvida utilizando:
 
 * Python
 * Programação Orientada a Objetos
-* Arquivos CSV
+* Manipulação de arquivos CSV
 
 ### Versão 2.0 (Atual)
 
-Migração para arquitetura web utilizando:
+Migração para aplicação web utilizando:
 
 * FastAPI
 * SQLite
-* HTML/CSS/JavaScript
+* HTML, CSS e JavaScript
 * Dashboard administrativo
+* Sistema de temas
+* Estrutura modular
 
 ---
 
 ## 📌 Status
 
-🚧 Em desenvolvimento
+🚧 Em desenvolvimento ativo
 
-Atualmente em processo de migração da versão CLI para uma arquitetura web moderna.
+O projeto encontra-se em processo de evolução da versão CLI para uma aplicação web completa, com foco em arquitetura moderna, experiência do usuário e gerenciamento eficiente de bibliotecas.
 
 ---
 
 ## 👨‍💻 Autor
 
-Arthur Almeida
+**Arthur Almeida**
 
-Projeto desenvolvido para evolução prática em desenvolvimento de software, back-end Python e aplicações web.
+Projeto desenvolvido para evolução prática em desenvolvimento de software, Python, banco de dados e aplicações web modernas.
