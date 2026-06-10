@@ -1,6 +1,13 @@
 # 📚 LibraryFlow
 
+![Python](https://img.shields.io/badge/Python-3.12+-blue?logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-Web_App-009688?logo=fastapi)
+![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite)
+![Status](https://img.shields.io/badge/Status-v2.1.0--beta-orange)
+
 Sistema web de gestão de bibliotecas desenvolvido com Python, FastAPI e SQLite para gerenciamento de usuários, acervo, empréstimos e devoluções.
+
+**Versão Atual:** v2.1.0-beta
 
 O projeto foi originalmente desenvolvido como uma aplicação de terminal (CLI) durante o curso de Desenvolvimento de Sistemas no SENAI e atualmente está sendo modernizado para uma arquitetura web completa, com dashboard administrativo, interface responsiva, sistema de temas e banco de dados relacional.
 
