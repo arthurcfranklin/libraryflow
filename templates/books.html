@@ -56,35 +56,33 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Clean Code</td>
-                            <td>Robert C. Martin</td>
-                            <td>2008</td>
-                            <td>Programação</td>
-                            <td>5</td>
-                            <td><span class="badge returned">Disponível</span></td>
-                            <td>
-                                <button class="action-menu-btn" aria-label="Opções do livro">
-                                   ⋮
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Python Fluente</td>
-                            <td>Luciano Ramalho</td>
-                            <td>2015</td>
-                            <td>Programação</td>
-                            <td>2</td>
-                            <td><span class="badge borrowed">Emprestado</span></td>
-                        </tr>
-                        <tr>
-                            <td>Engenharia de Software</td>
-                            <td>Ian Sommerville</td>
-                            <td>2011</td>
-                            <td>Tecnologia</td>
-                            <td>8</td>
-                            <td><span class="badge returned">Disponível</span></td>
-                        </tr>
+                        {% if books %}
+                            {% for book in books %}
+                            <tr>
+                                <td>{{ book.title }}</td>
+                                <td>{{ book.author }}</td>
+                                <td>{{ book.year }}</td>
+                                <td>{{ book.category }}</td>
+                                <td>{{ book.copies }}</td>
+                                <td>
+                                    {% if book.status == "Disponível" %}
+                                        <span class="badge returned">{{ book.status }}</span>
+                                    {% else %}
+                                        <span class="badge borrowed">{{ book.status }}</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <button class="action-menu-btn" aria-label="Opções do livro">
+                                         ⋮
+                                    </button>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        {% else %}
+                            <tr>
+                                <td colspan="7">Nenhum livro cadastrado.</td>
+                            </tr>
+                        {% endif %}
                     </tbody>
                 </table>
             </section>
