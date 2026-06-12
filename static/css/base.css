@@ -1,0 +1,45 @@
+:root {
+    --bg: #f3efe7;
+    --bg-dark: #17130f;
+    --surface: #fffaf1;
+    --surface-dark: #211b16;
+    --surface-soft: #f7f1e7;
+    --border: #e2d6c3;
+    --text: #241c15;
+    --muted: #7c6f64;
+    --accent: #2f6f4e;
+    --accent-hover: #24583e;
+    --brown: #8b5e34;
+    --shadow: 0 24px 70px rgba(39, 27, 16, 0.16);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+button {
+    margin-top: 8px;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: var(--accent);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--accent-hover);
+}
