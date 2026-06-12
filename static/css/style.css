@@ -602,3 +602,251 @@ body.dark-mode .action-menu-btn:hover {
     opacity: 0.7;
     margin-top: 6px;
 }
+.book-form {
+    margin-bottom: 28px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1.5fr 1fr auto;
+    gap: 12px;
+    align-items: center;
+}
+
+.form-grid input {
+    height: 42px;
+    padding: 0 14px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface-soft);
+    color: var(--text);
+    font-size: 14px;
+}
+
+.form-grid input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.form-grid button {
+    height: 42px;
+    padding: 0 18px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+body.dark-mode .form-grid input {
+    background: #221d18;
+    border-color: #3c3228;
+    color: #f3eee6;
+}
+
+body.dark-mode .form-grid input::placeholder {
+    color: #b8a99a;
+}
+/* =========================
+   Modal
+========================= */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    z-index: 999;
+
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal {
+    width: 100%;
+    max-width: 520px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+    padding: 28px;
+
+    transform: scale(0.96) translateY(8px);
+    opacity: 0;
+
+    transition: transform 0.22s ease, opacity 0.22s ease;
+}
+
+.modal-overlay.active .modal {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+    margin-bottom: 24px;
+}
+
+.modal-header > div {
+    flex: 1;
+}
+
+.modal-close {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+
+    border-radius: 12px;
+
+    background: #f3ede4;
+    border: 1px solid #d8ccbc;
+
+    color: #5f5143;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+    background: #0f5132;
+    border-color: #0f5132;
+    color: white;
+}
+
+.modal-actions button {
+    height: 46px;
+    flex: 1;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.modal-form input {
+    height: 46px;
+
+    padding: 0 14px;
+
+    border-radius: 12px;
+    border: 1px solid var(--border);
+
+    background: var(--surface-soft);
+    color: var(--text);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid #d8ccbc;
+    color: #5f5143;
+}
+
+.secondary-btn:hover {
+    background: #f3ede4;
+    color: #2b241d;
+}
+.modal {
+    color: #2b241d;
+}
+
+.modal h2 {
+    color: #2b241d;
+}
+
+.modal p {
+    color: #6b5a4d;
+}
+
+.modal label {
+    color: #6b5a4d;
+    font-weight: 600;
+}
+/* DARK MODE MODAL */
+
+body.dark-mode .modal {
+    background: #221d18;
+    border-color: #3c3228;
+    color: #f3eee6;
+}
+
+body.dark-mode .modal h2 {
+    color: #f3eee6;
+}
+
+body.dark-mode .modal p,
+body.dark-mode .modal label {
+    color: #b8a99a;
+}
+
+body.dark-mode .modal-form input {
+    background: #17130f;
+    border-color: #3c3228;
+    color: #f3eee6;
+}
+
+body.dark-mode .modal-form input::placeholder {
+    color: #8f7f70;
+}
+
+body.dark-mode .modal-close {
+    background: #8b5e34;
+    color: #fffaf1;
+}
+
+body.dark-mode .modal-close:hover {
+    background: #a06d3d;
+}
+
+body.dark-mode .secondary-btn {
+    background: transparent;
+    border: 1px solid #3c3228;
+    color: #f3eee6;
+}
+
+body.dark-mode .secondary-btn:hover {
+    background: #2c251f;
+}

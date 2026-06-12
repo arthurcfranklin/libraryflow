@@ -1,12 +1,12 @@
-from fastapi import FastAPI, Request, Depends
+from fastapi import FastAPI, Request, Depends, Form
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-
+from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 
 from app.database.connection import Base, engine, get_db
 from app.models.book import Book
-from app.services.book_service import list_books
+from app.services.book_service import list_books, create_book
 
 
 app = FastAPI(title="LibraryFlow")
@@ -42,4 +42,27 @@ def books(request: Request, db: Session = Depends(get_db)):
         request=request,
         name="books.html",
         context={"books": books_list}
+    )
+
+@app.post("/books")
+def create_book_route(
+    title: str = Form(...),
+    author: str = Form(...),
+    year: int = Form(...),
+    category: str = Form(...),
+    copies: int = Form(...),
+    db: Session = Depends(get_db)
+):
+    create_book(
+        db=db,
+        title=title,
+        author=author,
+        year=year,
+        category=category,
+        copies=copies
+    )
+
+    return RedirectResponse(
+        url="/books",
+        status_code=303
     )

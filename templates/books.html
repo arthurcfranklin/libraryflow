@@ -37,11 +37,13 @@
             </header>
 
             <section class="panel">
-                <div class="panel-header">
-                    <h2>Livros Cadastrados</h2>
-                    <button>Novo Livro</button>
-                </div>
+<div class="panel-header">
+    <h2>Livros Cadastrados</h2>
 
+    <button type="button" id="open-book-modal">
+        Novo Livro
+    </button>
+</div>
                 <table>
                     <thead>
                         <tr>
@@ -88,7 +90,60 @@
             </section>
         </section>
     </main>
+<div id="book-modal" class="modal-overlay">
+    <div class="modal">
+        <div class="modal-header">
+            <div>
+                <h2>Novo Livro</h2>
+                <p>Cadastre um novo livro no acervo da biblioteca.</p>
+            </div>
 
+            <button type="button" id="close-book-modal" class="modal-close">
+                ×
+            </button>
+        </div>
+
+        <form action="/books" method="post" class="modal-form">
+            <div class="form-group">
+                <label>Título</label>
+                <input type="text" name="title" placeholder="Ex: O Pequeno Príncipe" required>
+            </div>
+
+            <div class="form-group">
+                <label>Autor</label>
+                <input type="text" name="author" placeholder="Ex: Antoine de Saint-Exupéry" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Ano</label>
+                    <input type="number" name="year" placeholder="1943" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Exemplares</label>
+                    <input type="number" name="copies" min="1" placeholder="3" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Categoria</label>
+                <input type="text" name="category" placeholder="Ex: Fantasia" required>
+            </div>
+
+            <div class="modal-actions">
+                <button type="button" id="cancel-book-modal" class="secondary-btn">
+                    Cancelar
+                </button>
+
+                <button type="submit">
+                    Salvar Livro
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+    
     <script src="/static/js/app.js"></script>
 </body>
 </html>
