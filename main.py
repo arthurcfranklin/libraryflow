@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 
 from app.database.connection import Base, engine, get_db
 from app.models.book import Book
-from app.services.book_service import list_books, create_book
+from app.services.book_service import list_books, create_book, delete_book
 
 
 app = FastAPI(title="LibraryFlow")
@@ -66,3 +66,12 @@ def create_book_route(
         url="/books",
         status_code=303
     )
+
+@app.post("/books/{book_id}/delete")
+def delete_book_route(book_id: int, db: Session = Depends(get_db)):
+    delete_book(db, book_id)
+
+    return RedirectResponse(
+    url="/books?deleted=1",
+    status_code=303
+)

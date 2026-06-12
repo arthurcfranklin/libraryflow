@@ -40,7 +40,7 @@
 <div class="panel-header">
     <h2>Livros Cadastrados</h2>
 
-    <button type="button" id="open-book-modal">
+    <button type="button" id="open-book-modal" class="btn-primary panel-action-btn">
         Novo Livro
     </button>
 </div>
@@ -73,10 +73,21 @@
                                         <span class="badge borrowed">{{ book.status }}</span>
                                     {% endif %}
                                 </td>
+
                                 <td>
-                                    <button class="action-menu-btn" aria-label="Opções do livro">
-                                         ⋮
-                                    </button>
+                                    <form action="/books/{{ book.id }}/delete"
+                                        method="post"
+                                        class="delete-book-form">
+
+                                <button type="button"
+                                        class="action-menu-btn open-delete-modal"
+                                        data-delete-url="/books/{{ book.id }}/delete"
+                                        data-book-title="{{ book.title }}"
+                                        aria-label="Excluir livro">
+                                    🗑
+                                </button>
+
+                                    </form>
                                 </td>
                             </tr>
                             {% endfor %}
@@ -136,14 +147,47 @@
                     Cancelar
                 </button>
 
-                <button type="submit">
+                <button type="submit" class="btn-primary">
                     Salvar Livro
                 </button>
             </div>
         </form>
     </div>
 </div>
-    
+
+<div id="delete-modal" class="modal-overlay">
+    <div class="modal confirmation-modal">
+        <div class="modal-header">
+            <div>
+                <h2>Excluir Livro</h2>
+                <p id="delete-modal-message">
+                    Tem certeza que deseja excluir este livro?
+                </p>
+            </div>
+        </div>
+
+        <form id="delete-book-form" method="post">
+            <div class="modal-actions">
+                <button type="button" 
+                        id="cancel-delete-modal" 
+                        class="secondary-btn">
+                    Cancelar
+                </button>
+
+                <button type="submit" class="delete-confirm-btn">
+                    Excluir Livro
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+    {% if request.query_params.get("deleted") == "1" %}
+    <div id="toast" class="toast active">
+        Livro excluído com sucesso.
+    </div>
+{% endif %}
+
     <script src="/static/js/app.js"></script>
 </body>
 </html>

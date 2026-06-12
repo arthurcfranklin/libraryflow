@@ -61,10 +61,11 @@
     white-space: nowrap;
 }
 
-.panel-header button {
+.panel-action-btn {
     width: auto;
     min-width: 170px;
     padding: 12px 18px;
+    margin: 0;
 }
 
 table {
@@ -95,10 +96,6 @@ tbody tr {
 
 tbody tr:hover {
     background: rgba(47, 111, 78, 0.06);
-}
-
-tbody tr:last-child td {
-    border-bottom: none;
 }
 
 .badge {
@@ -159,4 +156,44 @@ tbody tr:last-child td {
 body:not(.dark-mode) .action-menu-btn:hover {
     background: rgba(47, 111, 78, 0.12);
     color: #2f6f4e;
+}
+
+.delete-book-form {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toast {
+position: fixed;
+
+top: 24px;
+left: 50%;
+
+transform: translateX(-50%) translateY(-10px);
+
+background: #2f6f4e;
+color: #ffffff;
+
+padding: 14px 18px;
+
+border-radius: 14px;
+box-shadow: 0 16px 45px rgba(39, 27, 16, 0.16);
+
+font-size: 14px;
+font-weight: 700;
+
+opacity: 0;
+pointer-events: none;
+
+z-index: 1000;
+
+transition: all 0.25s ease;
+
+}
+
+.toast.active {
+opacity: 1;
+transform: translateX(-50%) translateY(0);
 }

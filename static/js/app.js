@@ -48,3 +48,51 @@ if (openBookModal && bookModal) {
     });
 
 }
+
+// =========================
+// Modal Excluir Livro
+// =========================
+
+const deleteModal = document.getElementById("delete-modal");
+const cancelDeleteModal = document.getElementById("cancel-delete-modal");
+const deleteBookForm = document.getElementById("delete-book-form");
+const deleteModalMessage = document.getElementById("delete-modal-message");
+const openDeleteButtons = document.querySelectorAll(".open-delete-modal");
+
+openDeleteButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const deleteUrl = button.getAttribute("data-delete-url");
+        const bookTitle = button.getAttribute("data-book-title");
+
+        deleteBookForm.setAttribute("action", deleteUrl);
+        deleteModalMessage.textContent = `Tem certeza que deseja excluir "${bookTitle}"?`;
+
+        deleteModal.classList.add("active");
+    });
+});
+
+if (cancelDeleteModal) {
+    cancelDeleteModal.addEventListener("click", () => {
+        deleteModal.classList.remove("active");
+    });
+}
+
+if (deleteModal) {
+    deleteModal.addEventListener("click", (event) => {
+        if (event.target === deleteModal) {
+            deleteModal.classList.remove("active");
+        }
+    });
+}
+
+// =========================
+// Notificação de Livro Excluído
+// =========================
+
+const toast = document.getElementById("toast");
+
+if (toast) {
+    setTimeout(() => {
+        toast.classList.remove("active");
+    }, 2500);
+}

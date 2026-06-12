@@ -27,7 +27,7 @@ body {
     line-height: 1.5;
 }
 
-button {
+.btn-primary {
     margin-top: 8px;
     width: 100%;
     padding: 14px;
@@ -38,8 +38,9 @@ button {
     font-size: 15px;
     font-weight: 700;
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-button:hover {
+.btn-primary:hover {
     background: var(--accent-hover);
 }

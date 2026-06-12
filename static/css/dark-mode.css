@@ -1,16 +1,11 @@
-/* =========================
-   DARK MODE
-========================= */
+/* DARK MODE */
 
 body.dark-mode {
     background: #161310;
     color: #f3eee6;
 }
 
-body.dark-mode .dashboard-page {
-    background: #161310;
-}
-
+body.dark-mode .dashboard-page,
 body.dark-mode .dashboard-content {
     background: #161310;
 }
@@ -52,11 +47,6 @@ body.dark-mode td {
 
 body.dark-mode tbody tr:hover {
     background: rgba(95, 143, 111, 0.08);
-    border-radius: 12px;
-}
-
-body.dark-mode tbody tr:last-child td {
-    border-bottom: none;
 }
 
 /* SIDEBAR */
@@ -85,18 +75,16 @@ body.dark-mode .sidebar nav a.active {
     color: #fffaf1;
 }
 
-/* BOTÕES */
+/* BOTÕES PRINCIPAIS */
 
-body.dark-mode button,
-body.dark-mode .btn,
-body.dark-mode .panel-header button {
+body.dark-mode .btn-primary,
+body.dark-mode .panel-action-btn {
     background: #8b5e34;
     color: #fffaf1;
 }
 
-body.dark-mode button:hover,
-body.dark-mode .btn:hover,
-body.dark-mode .panel-header button:hover {
+body.dark-mode .btn-primary:hover,
+body.dark-mode .panel-action-btn:hover {
     background: #a06d3d;
 }
 
@@ -159,12 +147,17 @@ body.dark-mode .modal-form input::placeholder {
 
 body.dark-mode .modal-close {
     background: #8b5e34;
+    border-color: #8b5e34;
     color: #fffaf1;
 }
 
 body.dark-mode .modal-close:hover {
     background: #a06d3d;
+    border-color: #a06d3d;
+    color: #fffaf1;
 }
+
+/* MODAL BUTTONS */
 
 body.dark-mode .secondary-btn {
     background: transparent;
@@ -174,4 +167,23 @@ body.dark-mode .secondary-btn {
 
 body.dark-mode .secondary-btn:hover {
     background: #2c251f;
+    border-color: #3c3228;
+    color: #f3eee6;
+}
+
+body.dark-mode #delete-modal .delete-confirm-btn {
+    background: #8b5e34;
+    border: 1px solid #8b5e34;
+    color: #fffaf1;
+}
+
+body.dark-mode #delete-modal .delete-confirm-btn:hover {
+    background: #a06d3d;
+    border-color: #a06d3d;
+    color: #fffaf1;
+}
+
+body.dark-mode .toast {
+    background: #8b5e34;
+    color: #fffaf1;
 }

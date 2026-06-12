@@ -22,3 +22,12 @@ def create_book(db: Session, title: str, author: str, year: int, category: str, 
     db.refresh(book)
 
     return book
+
+def delete_book(db: Session, book_id: int):
+    book = db.query(Book).filter(Book.id == book_id).first()
+
+    if book:
+        db.delete(book)
+        db.commit()
+
+    return book
