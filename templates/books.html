@@ -74,20 +74,28 @@
                                     {% endif %}
                                 </td>
 
-                                <td>
-                                    <form action="/books/{{ book.id }}/delete"
-                                        method="post"
-                                        class="delete-book-form">
+                                <td class="actions-cell">
 
-                                <button type="button"
-                                        class="action-menu-btn open-delete-modal"
-                                        data-delete-url="/books/{{ book.id }}/delete"
-                                        data-book-title="{{ book.title }}"
-                                        aria-label="Excluir livro">
-                                    🗑
-                                </button>
+                                    <button type="button"
+                                            class="action-menu-btn open-edit-modal"
+                                            data-id="{{ book.id }}"
+                                            data-title="{{ book.title }}"
+                                            data-author="{{ book.author }}"
+                                            data-year="{{ book.year }}"
+                                            data-category="{{ book.category }}"
+                                            data-copies="{{ book.copies }}"
+                                            aria-label="Editar livro">
+                                        ✏️
+                                    </button>
 
-                                    </form>
+                                    <button type="button"
+                                            class="action-menu-btn open-delete-modal"
+                                            data-delete-url="/books/{{ book.id }}/delete"
+                                            data-book-title="{{ book.title }}"
+                                            aria-label="Excluir livro">
+                                        🗑
+                                    </button>
+
                                 </td>
                             </tr>
                             {% endfor %}
@@ -155,6 +163,72 @@
     </div>
 </div>
 
+<div id="edit-book-modal" class="modal-overlay">
+
+    <div class="modal">
+
+        <div class="modal-header">
+
+            <div>
+                <h2>Editar Livro</h2>
+                <p>Atualize os dados do livro selecionado.</p>
+            </div>
+
+        </div>
+
+        <form id="edit-book-form"
+              method="post"
+              class="modal-form">
+
+            <div class="form-group">
+                <label>Título</label>
+                <input type="text" name="title" id="edit-title" required>
+            </div>
+
+            <div class="form-group">
+                <label>Autor</label>
+                <input type="text" name="author" id="edit-author" required>
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label>Ano</label>
+                    <input type="number" name="year" id="edit-year" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Exemplares</label>
+                    <input type="number" name="copies" id="edit-copies" required>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label>Categoria</label>
+                <input type="text" name="category" id="edit-category" required>
+            </div>
+
+            <div class="modal-actions">
+
+                <button type="button"
+                        id="cancel-edit-modal"
+                        class="secondary-btn">
+                    Cancelar
+                </button>
+
+                <button type="submit" class="primary-btn">
+                    Salvar Alterações
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
 <div id="delete-modal" class="modal-overlay">
     <div class="modal confirmation-modal">
         <div class="modal-header">
@@ -185,6 +259,12 @@
     {% if request.query_params.get("deleted") == "1" %}
     <div id="toast" class="toast active">
         Livro excluído com sucesso.
+    </div>
+{% endif %}
+
+{% if request.query_params.get("updated") == "1" %}
+    <div id="toast" class="toast active">
+        Livro atualizado com sucesso.
     </div>
 {% endif %}
 

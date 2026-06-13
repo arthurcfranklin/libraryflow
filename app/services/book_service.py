@@ -31,3 +31,26 @@ def delete_book(db: Session, book_id: int):
         db.commit()
 
     return book
+
+def update_book(
+    db: Session,
+    book_id: int,
+    title: str,
+    author: str,
+    year: int,
+    category: str,
+    copies: int
+):
+    book = db.query(Book).filter(Book.id == book_id).first()
+
+    if book:
+        book.title = title
+        book.author = author
+        book.year = year
+        book.category = category
+        book.copies = copies
+
+        db.commit()
+        db.refresh(book)
+
+    return book

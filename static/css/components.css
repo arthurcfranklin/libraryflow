@@ -197,3 +197,9 @@ transition: all 0.25s ease;
 opacity: 1;
 transform: translateX(-50%) translateY(0);
 }
+
+.actions-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

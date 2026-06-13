@@ -190,3 +190,15 @@
     border-color: #24583e;
     color: #ffffff;
 }
+
+/* BOTÃO PRINCIPAL DOS MODAIS */
+
+.modal-actions button[type="submit"]:not(.delete-confirm-btn) {
+    background: var(--accent);
+    color: #ffffff;
+    border: none;
+}
+
+.modal-actions button[type="submit"]:not(.delete-confirm-btn):hover {
+    background: var(--accent-hover);
+}

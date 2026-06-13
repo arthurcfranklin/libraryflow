@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 
 from app.database.connection import Base, engine, get_db
 from app.models.book import Book
-from app.services.book_service import list_books, create_book, delete_book
+from app.services.book_service import list_books, create_book, delete_book, update_book
 
 
 app = FastAPI(title="LibraryFlow")
@@ -75,3 +75,28 @@ def delete_book_route(book_id: int, db: Session = Depends(get_db)):
     url="/books?deleted=1",
     status_code=303
 )
+
+@app.post("/books/{book_id}/edit")
+def update_book_route(
+    book_id: int,
+    title: str = Form(...),
+    author: str = Form(...),
+    year: int = Form(...),
+    category: str = Form(...),
+    copies: int = Form(...),
+    db: Session = Depends(get_db)
+):
+    update_book(
+        db=db,
+        book_id=book_id,
+        title=title,
+        author=author,
+        year=year,
+        category=category,
+        copies=copies
+    )
+
+    return RedirectResponse(
+        url="/books?updated=1",
+        status_code=303
+    )

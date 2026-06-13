@@ -187,3 +187,12 @@ body.dark-mode .toast {
     background: #8b5e34;
     color: #fffaf1;
 }
+
+body.dark-mode .modal-actions button[type="submit"]:not(.delete-confirm-btn) {
+    background: #8b5e34;
+    color: #fffaf1;
+}
+
+body.dark-mode .modal-actions button[type="submit"]:not(.delete-confirm-btn):hover {
+    background: #a06d3d;
+}

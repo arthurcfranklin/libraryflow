@@ -96,3 +96,59 @@ if (toast) {
         toast.classList.remove("active");
     }, 2500);
 }
+
+// =========================
+// Modal Editar Livro
+// =========================
+
+const editModal = document.getElementById("edit-book-modal");
+const editForm = document.getElementById("edit-book-form");
+
+const editTitle = document.getElementById("edit-title");
+const editAuthor = document.getElementById("edit-author");
+const editYear = document.getElementById("edit-year");
+const editCategory = document.getElementById("edit-category");
+const editCopies = document.getElementById("edit-copies");
+
+const cancelEditModal = document.getElementById("cancel-edit-modal");
+
+const editButtons = document.querySelectorAll(".open-edit-modal");
+
+editButtons.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+        const id = button.dataset.id;
+
+        editTitle.value = button.dataset.title;
+        editAuthor.value = button.dataset.author;
+        editYear.value = button.dataset.year;
+        editCategory.value = button.dataset.category;
+        editCopies.value = button.dataset.copies;
+
+        editForm.action = `/books/${id}/edit`;
+
+        editModal.classList.add("active");
+    });
+
+});
+
+if (cancelEditModal) {
+
+    cancelEditModal.addEventListener("click", () => {
+        editModal.classList.remove("active");
+    });
+
+}
+
+if (editModal) {
+
+    editModal.addEventListener("click", (event) => {
+
+        if (event.target === editModal) {
+            editModal.classList.remove("active");
+        }
+
+    });
+
+}
