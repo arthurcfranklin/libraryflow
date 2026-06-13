@@ -100,3 +100,18 @@ def update_book_route(
         url="/books?updated=1",
         status_code=303
     )
+
+@app.get("/loans")
+def loans(request: Request):
+    return templates.TemplateResponse(
+        request=request,
+        name="loans.html"
+    )
+
+
+@app.get("/users")
+def users(request: Request):
+    return templates.TemplateResponse(
+        request=request,
+        name="users.html"
+    )
