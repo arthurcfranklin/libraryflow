@@ -152,3 +152,50 @@ if (editModal) {
     });
 
 }
+
+// =========================
+// Sidebar Fixa
+// =========================
+
+const sidebarPin =
+    document.getElementById("sidebar-pin");
+
+if (sidebarPin) {
+
+    if (
+        localStorage.getItem("sidebar") === "pinned"
+    ) {
+        document.body.classList.add(
+            "sidebar-pinned"
+        );
+    }
+
+    sidebarPin.addEventListener("click", () => {
+
+        document.body.classList.toggle(
+            "sidebar-pinned"
+        );
+
+        if (
+            document.body.classList.contains(
+                "sidebar-pinned"
+            )
+        ) {
+
+            localStorage.setItem(
+                "sidebar",
+                "pinned"
+            );
+
+        } else {
+
+            localStorage.setItem(
+                "sidebar",
+                "collapsed"
+            );
+
+        }
+
+    });
+
+}

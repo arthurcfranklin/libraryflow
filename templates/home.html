@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibraryFlow | Página Inicial</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<main class="dashboard-page">
+
+    {% include "partials/sidebar.html" %}
+    
+    <section class="dashboard-content">
+
+        <header class="home-topbar">
+            <div>
+                <h1>Bem-vindo, Arthur 👋</h1>
+                <p>Acesse rapidamente os módulos do sistema.</p>
+            </div>
+
+            <div class="user-area">
+                <button id="theme-toggle" class="theme-toggle compact-theme-toggle" aria-label="Alternar tema">
+                    🌙
+                </button>
+
+                <button class="user-profile-btn">
+                    <span>AF</span>
+                    Arthur
+                </button>
+            </div>
+        </header>
+
+        <section class="module-grid">
+            <a href="/books" class="module-card">
+                <div>
+                    <span class="module-icon">📚</span>
+                    <h3>Livros</h3>
+                    <p>Cadastre, edite e organize os livros disponíveis no acervo.</p>
+                </div>
+                <span class="module-action">Gerenciar acervo →</span>
+            </a>
+
+            <a href="/users" class="module-card">
+                <div>
+                    <span class="module-icon">👤</span>
+                    <h3>Usuários</h3>
+                    <p>Gerencie os usuários cadastrados na biblioteca.</p>
+                </div>
+                <span class="module-action">Gerenciar usuários →</span>
+            </a>
+
+            <a href="/loans" class="module-card">
+                <div>
+                    <span class="module-icon">🔄</span>
+                    <h3>Empréstimos</h3>
+                    <p>Controle empréstimos, devoluções e movimentações.</p>
+                </div>
+                <span class="module-action">Gerenciar empréstimos →</span>
+            </a>
+
+            <a href="/dashboard" class="module-card">
+                <div>
+                    <span class="module-icon">📊</span>
+                    <h3>Dashboard</h3>
+                    <p>Acompanhe os principais indicadores operacionais.</p>
+                </div>
+                <span class="module-action">Visualizar painel →</span>
+            </a>
+        </section>
+
+    </section>
+
+</main>
+
+
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>

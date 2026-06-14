@@ -9,32 +9,27 @@
 <body>
 
     <main class="dashboard-page">
-        <aside class="sidebar">
-            <div class="sidebar-brand">
-                <span>📚</span>
-                <h2>LibraryFlow</h2>
-            </div>
-
-            <nav>
-                <a href="/dashboard">Dashboard</a>
-                <a href="/books" class="active">Livros</a>
-                <a href="/loans">Empréstimos</a>
-                <a href="/users">Usuários</a>
-                <a href="/">Sair</a>
-            </nav>
-        </aside>
+        
+{% include "partials/sidebar.html" %}
 
         <section class="dashboard-content">
             <header class="dashboard-header">
-                <div>
-                    <h1>Gestão de Acervo</h1>
-                    <p>Cadastre, visualize e gerencie os livros da biblioteca</p>
-                </div>
+    <div>
+        <h1>Gestão de Acervo</h1>
+        <p>Cadastre, visualize e gerencie os livros da biblioteca</p>
+    </div>
 
-                <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
-                    🌙
-                </button>
-            </header>
+    <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle compact-theme-toggle" aria-label="Alternar tema">
+            🌙
+        </button>
+
+        <button class="user-profile-btn">
+            <span>AF</span>
+            Arthur
+        </button>
+    </div>
+</header>
 
             <section class="panel">
 <div class="panel-header">

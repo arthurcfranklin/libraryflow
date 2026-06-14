@@ -1,0 +1,127 @@
+.home-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 34px;
+}
+
+.home-topbar h1 {
+    font-size: 38px;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.home-topbar p {
+    color: var(--muted);
+}
+
+.user-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.compact-theme-toggle {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    font-size: 18px;
+}
+
+.user-profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: auto;
+    height: 44px;
+    padding: 0 14px;
+
+    border-radius: 14px;
+    border: 1px solid var(--border);
+
+    background: var(--surface);
+    color: var(--text);
+
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.user-profile-btn span {
+    width: 30px;
+    height: 30px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+    background: var(--accent);
+    color: white;
+
+    font-size: 13px;
+}
+
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-top: 34px;
+}
+
+.module-card {
+    min-height: 210px;
+    padding: 26px;
+    border-radius: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    text-decoration: none;
+    box-shadow: 0 16px 45px rgba(39, 27, 16, 0.08);
+    transition: all 0.22s ease;
+}
+
+.module-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 55px rgba(39, 27, 16, 0.13);
+}
+
+.module-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background: var(--surface-soft);
+    font-size: 24px;
+    margin-bottom: 22px;
+}
+
+.module-card h3 {
+    color: var(--text);
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.module-card p {
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.module-action {
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.home-topbar .theme-toggle.compact-theme-toggle {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    max-width: 44px;
+
+    padding: 0;
+    margin: 0;
+
+    font-size: 18px;
+    border-radius: 14px;
+}

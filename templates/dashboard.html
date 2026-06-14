@@ -10,20 +10,7 @@
 
     <main class="dashboard-page">
 
-        <aside class="sidebar">
-            <div class="sidebar-brand">
-                <span>📚</span>
-                <h2>LibraryFlow</h2>
-            </div>
-
-            <nav>
-                <a href="/dashboard" class="active">Dashboard</a>
-                <a href="/books">Livros</a>
-                <a href="/loans">Empréstimos</a>
-                <a href="/users">Usuários</a>
-                <a href="/">Sair</a>
-            </nav>
-        </aside>
+{% include "partials/sidebar.html" %}
 
         <section class="dashboard-content">
 
@@ -33,10 +20,17 @@
                     <p>Visão geral da biblioteca e controle do acervo</p>
                 </div>
 
-                <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
-                        🌙
-                </button>
-            </header>
+    <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle compact-theme-toggle" aria-label="Alternar tema">
+            🌙
+        </button>
+
+        <button class="user-profile-btn">
+            <span>AF</span>
+            Arthur
+        </button>
+    </div>
+</header>
 
             <section class="cards">
                 <div class="card">

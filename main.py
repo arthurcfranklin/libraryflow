@@ -19,18 +19,26 @@ templates = Jinja2Templates(directory="templates")
 
 
 @app.get("/")
+def home(request: Request):
+    return templates.TemplateResponse(
+        request=request,
+        name="home.html",
+        context={"active_page": "home"}
+    )
+
+@app.get("/login")
 def login(request: Request):
     return templates.TemplateResponse(
         request=request,
         name="login.html"
     )
 
-
 @app.get("/dashboard")
 def dashboard(request: Request):
     return templates.TemplateResponse(
         request=request,
-        name="dashboard.html"
+        name="dashboard.html",
+        context={"active_page": "dashboard"}
     )
 
 
@@ -41,7 +49,10 @@ def books(request: Request, db: Session = Depends(get_db)):
     return templates.TemplateResponse(
         request=request,
         name="books.html",
-        context={"books": books_list}
+        context={
+            "books": books_list,
+            "active_page": "books"
+        }
     )
 
 @app.post("/books")
@@ -105,7 +116,8 @@ def update_book_route(
 def loans(request: Request):
     return templates.TemplateResponse(
         request=request,
-        name="loans.html"
+        name="loans.html",
+        context={"active_page": "loans"}
     )
 
 
@@ -113,5 +125,6 @@ def loans(request: Request):
 def users(request: Request):
     return templates.TemplateResponse(
         request=request,
-        name="users.html"
+        name="users.html",
+        context={"active_page": "users"}
     )

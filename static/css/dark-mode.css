@@ -196,3 +196,56 @@ body.dark-mode .modal-actions button[type="submit"]:not(.delete-confirm-btn) {
 body.dark-mode .modal-actions button[type="submit"]:not(.delete-confirm-btn):hover {
     background: #a06d3d;
 }
+
+body.dark-mode .home-topbar h1 {
+    color: #f3eee6;
+}
+
+body.dark-mode .home-topbar p {
+    color: #b8a99a;
+}
+
+body.dark-mode .module-card,
+body.dark-mode .quick-actions,
+body.dark-mode .summary-panel {
+    background: #221d18;
+    border-color: #3c3228;
+}
+
+body.dark-mode .module-card h3,
+body.dark-mode .quick-actions h3,
+body.dark-mode .summary-panel h3 {
+    color: #f3eee6;
+}
+
+body.dark-mode .module-card p,
+body.dark-mode .quick-actions p,
+body.dark-mode .summary-panel p,
+body.dark-mode .summary-list li {
+    color: #b8a99a;
+}
+
+body.dark-mode .module-icon {
+    background: #2c251f;
+}
+
+body.dark-mode .user-profile-btn {
+    background: #221d18;
+    border-color: #3c3228;
+    color: #f3eee6;
+}
+
+body.dark-mode .user-profile-btn {
+    background: #221d18;
+    border-color: #3c3228;
+    color: #f3eee6;
+}
+
+body.dark-mode .sidebar-pin {
+    color: #cbbda9;
+}
+
+body.dark-mode .sidebar-pin:hover {
+    background: rgba(160, 109, 61, 0.18);
+    color: #fffaf1;
+}

@@ -7,11 +7,56 @@
 }
 
 .sidebar {
-    width: 270px;
+    position: relative;
+    width: 82px;
+    min-width: 82px;
     background: #fffaf1;
     color: var(--text);
     border-right: 1px solid var(--border);
+    padding: 30px 16px;
+    overflow: hidden;
+    transition: width 0.25s ease, min-width 0.25s ease, padding 0.25s ease;
+}
+
+.sidebar:hover,
+body.sidebar-pinned .sidebar {
+    width: 270px;
+    min-width: 270px;
     padding: 30px 22px;
+}
+
+.sidebar-pin {
+    position: absolute;
+    top: 34px;
+    right: 18px;
+
+    width: 32px;
+    height: 32px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+    background: transparent;
+    color: var(--muted);
+
+    font-size: 15px;
+    cursor: pointer;
+
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.sidebar:hover .sidebar-pin,
+body.sidebar-pinned .sidebar-pin {
+    opacity: 1;
+}
+
+.sidebar-pin:hover {
+    background: rgba(139, 94, 52, 0.12);
+    color: var(--text);
 }
 
 .sidebar-brand {
@@ -19,11 +64,14 @@
     align-items: center;
     gap: 12px;
     margin-bottom: 38px;
+    white-space: nowrap;
 }
 
+.sidebar-brand-icon,
 .sidebar-brand span {
     width: 42px;
     height: 42px;
+    min-width: 42px;
     display: grid;
     place-items: center;
     border-radius: 14px;
@@ -35,6 +83,15 @@
     color: var(--text);
     font-size: 22px;
     letter-spacing: -0.4px;
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.sidebar:hover .sidebar-brand h2,
+body.sidebar-pinned .sidebar-brand h2 {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .sidebar nav {
@@ -44,12 +101,36 @@
 }
 
 .sidebar nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     color: var(--muted);
     text-decoration: none;
     padding: 13px 14px;
     border-radius: 12px;
     font-size: 15px;
-    transition: 0.2s;
+    transition: 0.2s ease;
+    white-space: nowrap;
+}
+
+.sidebar-icon {
+    width: 22px;
+    min-width: 22px;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+}
+
+.sidebar-text {
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.sidebar:hover .sidebar-text,
+body.sidebar-pinned .sidebar-text {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .sidebar nav a:hover,
@@ -94,8 +175,11 @@
         flex-direction: column;
     }
 
-    .sidebar {
+    .sidebar,
+    .sidebar:hover,
+    body.sidebar-pinned .sidebar {
         width: 100%;
+        min-width: 100%;
     }
 
     .cards {

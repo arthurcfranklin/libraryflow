@@ -1,0 +1,44 @@
+<aside class="sidebar">
+
+    <button id="sidebar-pin" class="sidebar-pin">
+        📌
+    </button>
+
+    <div class="sidebar-brand">
+        <span class="sidebar-brand-icon">📚</span>
+        <h2>LibraryFlow</h2>
+    </div>
+
+    <nav>
+        <a href="/" class="{% if active_page == 'home' %}active{% endif %}">
+            <span class="sidebar-icon">🏠</span>
+            <span class="sidebar-text">Página Inicial</span>
+        </a>
+
+        <a href="/dashboard" class="{% if active_page == 'dashboard' %}active{% endif %}">
+            <span class="sidebar-icon">📊</span>
+            <span class="sidebar-text">Dashboard</span>
+        </a>
+
+        <a href="/books" class="{% if active_page == 'books' %}active{% endif %}">
+            <span class="sidebar-icon">📚</span>
+            <span class="sidebar-text">Livros</span>
+        </a>
+
+        <a href="/loans" class="{% if active_page == 'loans' %}active{% endif %}">
+            <span class="sidebar-icon">🔄</span>
+            <span class="sidebar-text">Empréstimos</span>
+        </a>
+
+        <a href="/users" class="{% if active_page == 'users' %}active{% endif %}">
+            <span class="sidebar-icon">👤</span>
+            <span class="sidebar-text">Usuários</span>
+        </a>
+
+        <a href="/login">
+            <span class="sidebar-icon">🚪</span>
+            <span class="sidebar-text">Sair</span>
+        </a>
+    </nav>
+
+</aside>
