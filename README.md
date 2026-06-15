@@ -8,11 +8,11 @@
 ![CSS3](https://img.shields.io/badge/CSS3-Styling-1572B6?logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-Interactivity-F7DF1E?logo=javascript&logoColor=black)
 ![Jinja2](https://img.shields.io/badge/Jinja2-Templates-B41717)
-![Status](https://img.shields.io/badge/Status-v2.2.0--beta-orange)
+![Status](https://img.shields.io/badge/Status-v0.3.0--beta-orange)
 
 Sistema web de gestão de bibliotecas desenvolvido com Python, FastAPI e SQLite.
 
-**Versão Atual:** v2.2.0-beta
+**Versão Atual:** v0.3.0-beta
 
 O LibraryFlow surgiu a partir da modernização de uma aplicação acadêmica originalmente desenvolvida em terminal (CLI), sendo posteriormente reestruturado para uma arquitetura web baseada em FastAPI, SQLAlchemy e SQLite.
 
