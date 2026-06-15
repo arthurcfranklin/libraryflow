@@ -12,7 +12,7 @@
 
 Sistema web de gestão de bibliotecas desenvolvido com Python, FastAPI e SQLite.
 
-**Versão Atual:** v2.2.0-beta
+**Versão Atual:** v0.3.0-beta
 
 O LibraryFlow surgiu a partir da modernização de uma aplicação acadêmica originalmente desenvolvida em terminal (CLI), sendo posteriormente reestruturado para uma arquitetura web baseada em FastAPI, SQLAlchemy e SQLite.
 
