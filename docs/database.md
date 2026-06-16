@@ -18,7 +18,7 @@ O banco de dados atual utiliza SQLite, integrado à aplicação por meio do SQLA
 | ORM                     | **SQLAlchemy**  |
 | Status                  | **Em Evolução** |
 | Versão Atual do Sistema | **v0.6.0-beta** |
-| Versão do Documento     | **v1.1**        |
+| Versão do Documento     | **v1.2**        |
 
 ---
 
@@ -253,4 +253,4 @@ Em manutenção contínua conforme evolução do modelo de dados.
 
 ---
 
-**Última atualização:** Junho de 2026 | **Versão:** v1.1
+**Última atualização:** Junho de 2026 | **Versão:** v1.2

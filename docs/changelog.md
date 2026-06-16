@@ -14,8 +14,8 @@ Este documento segue o princípio de versionamento semântico e registra funcion
 | Projeto                 | **LibraryFlow**         |
 | Categoria               | **Controle de Versões** |
 | Status                  | **Ativo**               |
-| Versão Atual do Sistema | **v0.5.0-beta**         |
-| Versão do Documento     | **v1.0**                |
+| Versão Atual do Sistema | **v0.6.0-beta**         |
+| Versão do Documento     | **v1.2**                |
 
 ---
 
@@ -152,13 +152,24 @@ Onde:
 
 ## Adicionado
 
-* Model User
-* Estrutura inicial da entidade User
-* Campos:
-  * name
-  * email
-  * registration
-  * status
+#### Entidade User
+- Model User
+- Estrutura inicial da entidade User
+- Campos:
+  - name
+  - email
+  - registration
+  - status
+
+#### Persistência de Usuários
+- Camada de persistência de usuários
+- Serviço UserService
+
+#### Operações Implementadas
+- Listagem de usuários
+- Cadastro de usuários
+- Atualização de usuários
+- Exclusão de usuários
 
 ## Status
 
@@ -166,20 +177,7 @@ Onde:
 
 ---
 
-# Próximas Versões
-
-## **v0.6.0-beta**
-
-Planejado:
-
-* Cadastro de usuários
-* Consulta de usuários
-* Edição de usuários
-* Exclusão de usuários
-
----
-
-## **v0.7.0-beta**
+## [**v0.7.0-beta**]
 
 Planejado:
 
@@ -189,7 +187,7 @@ Planejado:
 
 ---
 
-## **v0.8.0-beta**
+## [**v0.8.0-beta**]
 
 Planejado:
 
@@ -214,4 +212,4 @@ Atualizado a cada release publicada.
 
 ---
 
-**Última atualização:** Junho de 2026 | **Versão:** v1.0
+**Última atualização:** Junho de 2026 | **Versão:** v1.2
