@@ -4,27 +4,42 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-Web%20App-009688?logo=fastapi)
 ![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-ORM-red)
-![HTML5](https://img.shields.io/badge/HTML5-Frontend-E34F26?logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-Styling-1572B6?logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-Interactivity-F7DF1E?logo=javascript&logoColor=black)
-![Jinja2](https://img.shields.io/badge/Jinja2-Templates-B41717)
-![Status](https://img.shields.io/badge/Status-v0.3.0--beta-orange)
+![HTML5](https://img.shields.io/badge/HTML5-Frontend-E34F26?logo=html5\&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-Styling-1572B6?logo=css3\&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-Frontend-F7DF1E?logo=javascript\&logoColor=black)
 
-Sistema web de gestão de bibliotecas desenvolvido com Python, FastAPI e SQLite.
-
-**Versão Atual:** v0.3.0-beta
-
-O LibraryFlow surgiu a partir da modernização de uma aplicação acadêmica originalmente desenvolvida em terminal (CLI), sendo posteriormente reestruturado para uma arquitetura web baseada em FastAPI, SQLAlchemy e SQLite.
-
-O projeto tem como objetivo consolidar conhecimentos em desenvolvimento web, arquitetura de software, persistência de dados e construção de interfaces modernas.
+Sistema web de gestão de bibliotecas desenvolvido com Python, FastAPI, SQLAlchemy e SQLite.
 
 ---
 
-# 📖 Visão Geral
+# 📊 Status
 
-O LibraryFlow centraliza o gerenciamento de bibliotecas em uma única plataforma, permitindo controlar o acervo através de uma interface intuitiva, responsiva e organizada.
+🟢 Em desenvolvimento ativo
 
-Atualmente o projeto já possui persistência de dados, cadastro e remoção de livros, sistema de temas e interface administrativa funcional.
+**Versão Atual:** v0.5.0-beta
+
+O projeto encontra-se em fase beta, com arquitetura consolidada, CRUD completo de livros, documentação técnica formalizada e roadmap definido para os próximos módulos.
+
+---
+
+# 📖 Sobre o Projeto
+
+O LibraryFlow é uma aplicação web para gerenciamento de bibliotecas, desenvolvida com foco em arquitetura de software, persistência de dados, modelagem de sistemas e boas práticas de engenharia de software.
+
+O projeto surgiu a partir da evolução de uma aplicação acadêmica originalmente desenvolvida em terminal (CLI), sendo posteriormente reestruturado para uma arquitetura web moderna baseada em FastAPI.
+
+Além do desenvolvimento da aplicação, o projeto possui documentação técnica, governança de desenvolvimento, roadmap evolutivo e histórico formal de releases.
+
+---
+
+# 🎯 Objetivos
+
+* Gerenciar acervos bibliográficos
+* Controlar empréstimos e devoluções
+* Gerenciar usuários da biblioteca
+* Consolidar conhecimentos em desenvolvimento web
+* Aplicar conceitos de arquitetura de software
+* Praticar modelagem e documentação de sistemas
 
 ---
 
@@ -46,90 +61,36 @@ Atualmente o projeto já possui persistência de dados, cadastro e remoção de 
 
 # ✨ Funcionalidades
 
-## 📚 Gestão de Acervo
+## 📚 Gestão de Livros
 
 * Cadastro de livros
-* Listagem dinâmica de livros
-* Persistência em SQLite
+* Consulta de livros
+* Edição de livros
 * Exclusão de livros
-* Modal de confirmação de exclusão
-* Toast de feedback para operações concluídas
+* Persistência em SQLite
+* Integração com SQLAlchemy ORM
 
-## 🎨 Interface Moderna
+## 🎨 Interface
 
 * Tema claro
 * Tema escuro
-* Persistência de preferências via LocalStorage
+* Dashboard administrativo
 * Interface responsiva
-* Modais animados
-* Feedback visual para ações do usuário
+* Modais interativos
+* Sistema de notificações
 
-## ⚙️ Persistência de Dados
+## ⚙️ Arquitetura
 
-* Integração com SQLite
-* SQLAlchemy ORM
-* Camada de serviços
-* Organização modular da aplicação
-
----
-
-# 🖥️ Front-end Overview
-
-### Tecnologias
-
-* HTML5
-* CSS3
-* JavaScript
-* Jinja2 Templates
-
-### Componentes Atuais
-
-* Tela de Login
-* Dashboard
-* Gestão de Livros
-* Modal de Cadastro
-* Modal de Confirmação
-* Sistema de Toast Notifications
-* Alternador de Tema
-
-### Organização
-
-```text
-templates/
-static/
-├── css/
-├── js/
-└── images/
-```
-
----
-
-# ⚙️ Back-end Overview
-
-### Tecnologias
-
-* Python 3.13
 * FastAPI
-* SQLAlchemy
+* SQLAlchemy ORM
 * SQLite
-
-### Responsabilidades
-
-* Gerenciamento de rotas
-* Regras de negócio
-* Persistência de dados
-* Integração com banco de dados
-* Renderização de templates
-
-### Operações Implementadas
-
-* CREATE Book
-* READ Books
-* DELETE Book
+* Jinja2 Templates
+* Organização modular
+* Camadas de aplicação definidas
 
 ---
 
-# 🏗️ Architecture
+# 🏗️ Arquitetura
 
 ```text
 Usuário
@@ -150,38 +111,9 @@ SQLAlchemy ORM
 SQLite Database
 ```
 
-## Camadas da Aplicação
-
-### Presentation Layer
-
-```text
-templates/
-static/
-```
-
-### Application Layer
-
-```text
-main.py
-app/routes/
-```
-
-### Business Layer
-
-```text
-app/services/
-```
-
-### Data Layer
-
-```text
-app/models/
-app/database/
-```
-
 ---
 
-# 🛠 Tecnologias Utilizadas
+# 🛠️ Tecnologias Utilizadas
 
 ## Backend
 
@@ -197,85 +129,96 @@ app/database/
 * JavaScript
 * Jinja2
 
-## Controle de Versão
+## Versionamento
 
 * Git
 * GitHub
 
 ---
 
-# 📁 Estrutura do Projeto
+# 📚 Documentação
+
+Toda a documentação técnica do projeto encontra-se disponível em:
 
 ```text
-libraryflow/
-│
-├── app/
-│   ├── database/
-│   ├── models/
-│   ├── routes/
-│   └── services/
-│
-├── database/
-│   └── libraryflow.db
-│
-├── static/
-│   ├── css/
-│   ├── js/
-│   └── images/
-│
-├── templates/
-│
-├── main.py
-├── requirements.txt
-└── README.md
+docs/
 ```
+
+## Documentos Disponíveis
+
+* Architecture Documentation
+* Requirements Documentation
+* Business Rules Documentation
+* Use Cases Documentation
+* Database Documentation
+* API Documentation
+* Design Documentation
+* Setup Guide
+* Troubleshooting Guide
+* Changelog
+* Contribution Guidelines
+* Product Roadmap
 
 ---
 
-# 🗺 Roadmap
+# 🚀 Releases
+
+| Versão       | Descrição                              |
+| ------------ | -------------------------------------- |
+| v0.1.0-alpha | Initial Web Architecture               |
+| v0.2.0-alpha | Dashboard and Theme System             |
+| v0.3.0-alpha | Books Management Foundation            |
+| v0.4.0-beta  | Complete Books CRUD                    |
+| v0.5.0-beta  | Documentation and Governance Framework |
+
+---
+
+# 🗺️ Roadmap
 
 ## ✅ Concluído
 
-* Estruturação da arquitetura web
-* Interface de login
-* Dashboard administrativo
-* Sistema de temas claro e escuro
-* Integração SQLite
+* Arquitetura Web
+* Dashboard Administrativo
+* Sistema de Temas
+* CRUD Completo de Livros
+* Persistência SQLite
 * Integração SQLAlchemy
-* Cadastro de livros
-* Exclusão de livros
-* Modal de confirmação
-* Toast notifications
-* Organização modular do CSS
+* Estrutura Modular
+* Documentação Técnica Completa
+* Sistema de Releases
+* Governança do Projeto
 
-## 🚧 Em Desenvolvimento
+## 🚧 Próxima Versão — v0.6.0-beta
 
-* Edição de livros
-* Dashboard dinâmico
-* CRUD de usuários
-* CRUD de empréstimos
+### Users Management Module
 
-## 🔮 Futuro
+* Cadastro de usuários
+* Consulta de usuários
+* Edição de usuários
+* Exclusão de usuários
 
-* Controle de devoluções
-* Histórico de movimentações
-* Controle de multas
-* Pesquisa avançada
+## 🔮 Futuras Versões
+
+### v0.7.0-beta
+
+* Empréstimos
+* Devoluções
+* Controle de disponibilidade
+
+### v0.8.0-beta
+
+* Autenticação
+* Controle de sessão
+* Proteção de rotas
+
+### v0.9.0-beta
+
 * Relatórios administrativos
-* API REST documentada
+* Funcionalidades de auditoria
+* Recursos de gestão
+
+### v1.0.0
+
+* Stable Release
 
 ---
-
-# 📊 Status
-
-🟡 Em desenvolvimento ativo
-
-Atualmente o projeto já possui persistência de dados funcional e CRUD parcial do acervo, com foco na implementação das operações restantes e dos módulos de usuários e empréstimos.
-
----
-
-# 👨‍💻 Autor
-
-**Arthur Almeida**
-
-Projeto desenvolvido para evolução prática em desenvolvimento web, banco de dados, arquitetura de software e aplicações modernas.
