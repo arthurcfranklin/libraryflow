@@ -148,6 +148,24 @@ Onde:
 
 ---
 
+# [**v0.6.0-beta**] - Em Desenvolvimento
+
+## Adicionado
+
+* Model User
+* Estrutura inicial da entidade User
+* Campos:
+  * name
+  * email
+  * registration
+  * status
+
+## Status
+
+🚧 Em desenvolvimento
+
+---
+
 # Próximas Versões
 
 ## **v0.6.0-beta**

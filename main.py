@@ -5,7 +5,7 @@ from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 
 from app.database.connection import Base, engine, get_db
-from app.models.book import Book
+from app.models import Book, User
 from app.services.book_service import list_books, create_book, delete_book, update_book
 
 

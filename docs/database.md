@@ -17,8 +17,8 @@ O banco de dados atual utiliza SQLite, integrado à aplicação por meio do SQLA
 | Banco Atual             | **SQLite**      |
 | ORM                     | **SQLAlchemy**  |
 | Status                  | **Em Evolução** |
-| Versão Atual do Sistema | **v0.5.0-beta** |
-| Versão do Documento     | **v1.0**        |
+| Versão Atual do Sistema | **v0.6.0-beta** |
+| Versão do Documento     | **v1.1**        |
 
 ---
 
@@ -64,61 +64,59 @@ A entidade `books` representa os livros cadastrados no acervo.
 
 | Código | Regra                                    |
 | ------ | ---------------------------------------- |
-| **BR-L01** | Livro deve possuir título                |
-| **BR-L02** | Livro deve possuir autor                 |
-| **BR-L03** | Quantidade de exemplares deve ser válida |
-| **BR-L04** | Livro deve possuir categoria             |
-| **BR-L05** | Ano de publicação deve ser válido        |
+| BR-L01 | Livro deve possuir título                |
+| BR-L02 | Livro deve possuir autor                 |
+| BR-L03 | Quantidade de exemplares deve ser válida |
+| BR-L04 | Livro deve possuir categoria             |
+| BR-L05 | Ano de publicação deve ser válido        |
 
 ### Requisitos Relacionados
 
 | Código | Requisito                   |
 | ------ | --------------------------- |
-| **RF001**  | Cadastro de Livros          |
-| **RF002**  | Edição de Livros            |
-| **RF003**  | Exclusão de Livros          |
-| **RF004**  | Consulta de Acervo          |
-| **RF005**  | Controle de Disponibilidade |
+| RF001  | Cadastro de Livros          |
+| RF002  | Edição de Livros            |
+| RF003  | Exclusão de Livros          |
+| RF004  | Consulta de Acervo          |
+| RF005  | Controle de Disponibilidade |
 
 ---
 
-# 6. Entidades Planejadas
+## 5.2 users
 
-## 6.1 users
+A entidade `users` representa os usuários cadastrados no sistema.
 
-A entidade `users` representará os usuários cadastrados na biblioteca.
+### Campos
 
-### Campos Planejados
-
-| Campo      | Tipo     | Obrigatório | Descrição                      |
-| ---------- | -------- | ----------- | ------------------------------ |
-| id         | Integer  | Sim         | Identificador único do usuário |
-| name       | String   | Sim         | Nome completo                  |
-| email      | String   | Sim         | E-mail do usuário              |
-| identifier | String   | Sim         | Matrícula ou identificação     |
-| phone      | String   | Não         | Telefone de contato            |
-| status     | String   | Sim         | Status do cadastro             |
-| created_at | DateTime | Sim         | Data de criação do cadastro    |
+| Campo        | Tipo    | Obrigatório | Descrição                      |
+| ------------ | ------- | ----------- | ------------------------------ |
+| id           | Integer | Sim         | Identificador único do usuário |
+| name         | String  | Sim         | Nome completo                  |
+| email        | String  | Sim         | E-mail do usuário              |
+| registration | String  | Sim         | Matrícula ou identificação     |
+| status       | String  | Sim         | Status do cadastro             |
 
 ### Regras Relacionadas
 
 | Código | Regra                               |
 | ------ | ----------------------------------- |
-| **BR-U01** | Usuário deve possuir identificação  |
-| **BR-U02** | Usuário deve possuir cadastro ativo |
+| BR-U01 | Usuário deve possuir identificação  |
+| BR-U02 | Usuário deve possuir cadastro ativo |
 
 ### Requisitos Relacionados
 
 | Código | Requisito            |
 | ------ | -------------------- |
-| **RF006**  | Cadastro de Usuários |
-| **RF007**  | Edição de Usuários   |
-| **RF008**  | Exclusão de Usuários |
-| **RF009**  | Consulta de Usuários |
+| RF006  | Cadastro de Usuários |
+| RF007  | Edição de Usuários   |
+| RF008  | Exclusão de Usuários |
+| RF009  | Consulta de Usuários |
 
 ---
 
-## 6.2 loans
+# 6. Entidades Planejadas
+
+## 6.1 loans
 
 A entidade `loans` representará os empréstimos realizados no sistema.
 
@@ -174,7 +172,7 @@ users
 
 ---
 
-# 8. Modelo Relacional Planejado
+# 8. Modelo Relacional
 
 ```text
 books
@@ -190,10 +188,7 @@ users
 ├── id
 ├── name
 ├── email
-├── identifier
-├── phone
 ├── status
-└── created_at
 
 loans
 ├── id
@@ -258,4 +253,4 @@ Em manutenção contínua conforme evolução do modelo de dados.
 
 ---
 
-**Última atualização:** Junho de 2026 | **Versão:** v1.0
+**Última atualização:** Junho de 2026 | **Versão:** v1.1
