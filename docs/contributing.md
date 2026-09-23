@@ -1,63 +1,38 @@
-# Contributing - LibraryFlow
+# Contributing to LibraryFlow
 
-Este documento define as diretrizes para contribuição no LibraryFlow. O objetivo é garantir consistência no desenvolvimento, organização das entregas e qualidade do código ao longo da evolução do projeto.
+This document defines the development and contribution guidelines used to keep LibraryFlow consistent as the project evolves.
 
----
+## Development Workflow
 
-## 1. Metadados
-
-| Campo                   | Descrição    |
-| ----------------------- | ------------ |
-| Documento               | Contributing |
-| Projeto                 | LibraryFlow  |
-| Categoria               | Governança   |
-| Status                  | Ativo        |
-| Versão Atual do Sistema | v0.5.0-beta  |
-| Versão do Documento     | v1.0         |
-
----
-
-## 2. Objetivo
-
-Estabelecer padrões para desenvolvimento, documentação, versionamento e colaboração dentro do projeto.
-
----
-
-## 3. Fluxo de Desenvolvimento
-
-O desenvolvimento do LibraryFlow segue o fluxo:
+LibraryFlow follows an incremental development workflow:
 
 ```text
 Roadmap
-    ↓
+   ↓
 Milestone
-    ↓
+   ↓
 Issue
-    ↓
-Implementação
-    ↓
-Documentação
-    ↓
+   ↓
+Implementation
+   ↓
+Validation
+   ↓
+Documentation
+   ↓
 Commit
-    ↓
+   ↓
 Release
 ```
 
----
+Features and structural changes should remain aligned with the project roadmap, technical documentation, and current architecture.
 
-## 4. Estrutura de Branches
+## Branch Strategy
 
-Atualmente o projeto utiliza a branch principal:
+Development currently takes place on the `main` branch.
 
-```text
-main
-```
+As the project grows, a broader branching strategy may be adopted when the additional separation becomes useful.
 
----
-
-## Evolução Futura
-
-Conforme o crescimento do projeto, poderá ser adotado:
+Possible future branches include:
 
 ```text
 main
@@ -67,239 +42,132 @@ main
 └── docs/*
 ```
 
----
+Branches should only be introduced when they improve the development workflow rather than adding unnecessary process overhead.
 
-## 5. Padrão de Commits
+## Commit Convention
 
-Os commits devem seguir uma convenção simples e padronizada.
+LibraryFlow uses a Conventional Commits-style convention.
 
----
+| Type | Purpose | Example |
+| --- | --- | --- |
+| `feat` | New functionality | `feat: implement users module` |
+| `fix` | Bug fix | `fix: resolve sidebar rendering issue` |
+| `docs` | Documentation changes | `docs: update database documentation` |
+| `refactor` | Internal restructuring without changing behavior | `refactor: reorganize services layer` |
+| `style` | Interface or presentation changes | `style: improve dashboard layout` |
+| `chore` | Maintenance and administrative tasks | `chore: update dependencies` |
 
-### **feat**
+Commit messages should be concise and describe the purpose of the change.
 
-Nova funcionalidade.
+## Development Guidelines
 
-Exemplo:
+Before committing a change:
 
-```text
-feat: implement users module
-```
+- Validate the affected functionality.
+- Review the implementation for unintended changes.
+- Remove unused code when appropriate.
+- Maintain consistency with the existing architecture.
+- Update related documentation when behavior or structure changes.
+- Keep changes focused on a clear purpose.
 
----
+## Documentation
 
-### **fix**
+Documentation is maintained alongside the application in [`docs/`](./).
 
-Correção de problemas.
+Changes that affect system behavior, architecture, requirements, or workflows should update the relevant documentation.
 
-Exemplo:
+Depending on the change, this may include:
 
-```text
-fix: resolve sidebar rendering issue
-```
+- [`requirements.md`](requirements.md)
+- [`business-rules.md`](business-rules.md)
+- [`use-cases/use-cases.md`](use-cases/use-cases.md)
+- [`database.md`](database.md)
+- [`api.md`](api.md)
+- [`architecture.md`](architecture.md)
+- [`roadmap.md`](roadmap.md)
+- [`changelog.md`](changelog.md)
 
----
+Use cases affected by a feature should also be reviewed individually in [`use-cases/`](use-cases/).
 
-### **docs**
+## Issues
 
-Alterações de documentação.
+Features, bugs, and relevant technical work should be tracked through GitHub Issues when appropriate.
 
-Exemplo:
+A useful issue should clearly identify:
 
-```text
-docs: add database documentation
-```
+- the objective or problem;
+- the expected behavior;
+- relevant requirements or business rules;
+- technical considerations when applicable.
 
----
-
-### **refactor**
-
-Refatoração sem alteração funcional.
-
-Exemplo:
-
-```text
-refactor: reorganize services layer
-```
-
----
-
-### **style**
-
-Alterações visuais.
-
-Exemplo:
+Example:
 
 ```text
-style: improve dashboard layout
-```
-
----
-
-### chore**
-
-Tarefas administrativas.
-
-Exemplo:
-
-```text
-chore: update dependencies
-```
-
----
-
-## 6. Boas Práticas de Desenvolvimento
-
-Antes de realizar um commit:
-
-* Validar funcionamento da aplicação.
-* Revisar alterações realizadas.
-* Atualizar documentação quando necessário.
-* Evitar código não utilizado.
-* Manter consistência com a arquitetura definida.
-
----
-
-## 7. Boas Práticas de Documentação
-
-Sempre que uma funcionalidade relevante for criada:
-
-* Atualizar roadmap.md quando necessário.
-* Atualizar changelog.md.
-* Atualizar documentação técnica relacionada.
-* Atualizar casos de uso impactados.
-
----
-
-### Documentos Relacionados
-
-Possíveis atualizações:
-
-```text
-requirements.md
-business-rules.md
-use-cases.md
-database.md
-api.md
-roadmap.md
-changelog.md
-```
-
----
-
-## 8. Issues
-
-As funcionalidades devem ser registradas através de Issues sempre que possível.
-
----
-
-### Exemplo
-
-```text
-Título:
+Title:
 Implement Users Management Module
 
-Descrição:
-Implementar CRUD completo de usuários conforme requisitos RF006 a RF009.
+Description:
+Implement the users CRUD according to requirements RF006 through RF009.
 ```
 
----
+## Pull Requests
 
-## 9. Pull Requests
+When pull requests are used, changes should be reviewed for:
 
-Antes de aprovar um Pull Request deve-se verificar:
+- correct functionality;
+- code quality;
+- architectural consistency;
+- visual consistency when the interface is affected;
+- appropriate documentation updates;
+- unintended regressions.
 
-* Funcionamento da funcionalidade.
-* Qualidade do código.
-* Consistência visual.
-* Atualização da documentação.
-* Compatibilidade com a arquitetura do projeto.
+Pull requests should remain focused and avoid combining unrelated changes.
 
----
+## Releases
 
-## 10. Releases
-
-As releases devem representar marcos relevantes do projeto.
-
----
-
-### Estrutura
+LibraryFlow follows semantic versioning conventions:
 
 ```text
 vMAJOR.MINOR.PATCH
 ```
 
-Exemplo:
+Pre-release identifiers may be used while the project is under development:
 
 ```text
 v0.5.0-beta
 ```
 
----
+A release should represent a meaningful project milestone and should only be created after:
 
-### Requisitos para Release
+- the planned functionality is complete;
+- affected functionality has been validated;
+- relevant documentation has been updated;
+- the changelog reflects the release.
 
-* Funcionalidade concluída.
-* Código validado.
-* Documentação atualizada.
-* Changelog atualizado.
+## Milestones
 
----
+Milestones organize larger stages of the product roadmap.
 
-## 11. Milestones
+Current planned milestones include:
 
-As milestones representam objetivos maiores do produto.
+| Milestone | Status |
+| --- | --- |
+| Users Management Module | Planned |
+| Loans Management Module | Planned |
+| Authentication Module | Planned |
+| Stable Release `v1.0.0` | Future |
 
----
+For the complete development plan, see [`roadmap.md`](roadmap.md).
 
-### Milestones Atuais
+## Project Standards
 
-| Milestone               | Status    |
-| ----------------------- | --------- |
-| Users Management Module | **Planejado** |
-| Loans Management Module | **Planejado** |
-| Authentication Module   | **Planejado** |
-| Stable Release v1.0.0   | **Futuro**    |
+Contributions should preserve the principles established throughout the project:
 
----
+- clear and maintainable code;
+- consistent architecture;
+- incremental development;
+- synchronized technical documentation;
+- focused commits and changes;
+- simple solutions where additional complexity provides no clear benefit.
 
-## 12. Qualidade do Projeto
-
-O projeto busca manter:
-
-* Código limpo
-* Documentação atualizada
-* Arquitetura consistente
-* Evolução incremental
-* Versionamento organizado
-
----
-
-## 13. Filosofia do Projeto
-
-O LibraryFlow é desenvolvido com foco em:
-
-* Simplicidade
-* Organização
-* Escalabilidade
-* Manutenibilidade
-* Boas práticas de engenharia de software
-
----
-
-## 14. Documentos Relacionados
-
-* roadmap.md
-* architecture.md
-* requirements.md
-* use-cases.md
-* changelog.md
-
----
-
-## 15. Status do Documento
-
-Em manutenção contínua conforme evolução do projeto.
-
----
-
-**Última atualização:** Junho de 2026 | **Versão:** v1.0
+These guidelines should evolve with the project as its architecture and development workflow mature.
