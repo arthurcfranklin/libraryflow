@@ -1,224 +1,221 @@
-# 📚 LibraryFlow
+# LibraryFlow
 
-![Python](https://img.shields.io/badge/Python-3.13+-blue?logo=python)
-![FastAPI](https://img.shields.io/badge/FastAPI-Web%20App-009688?logo=fastapi)
-![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite)
-![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-ORM-red)
-![HTML5](https://img.shields.io/badge/HTML5-Frontend-E34F26?logo=html5\&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-Styling-1572B6?logo=css3\&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-Frontend-F7DF1E?logo=javascript\&logoColor=black)
+Web-based library management system built with FastAPI, SQLAlchemy, and SQLite.
 
-Sistema web de gestão de bibliotecas desenvolvido com Python, FastAPI, SQLAlchemy e SQLite.
+![Python](https://img.shields.io/badge/Python-3.13+-3776AB?style=flat&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-Web%20Application-009688?style=flat&logo=fastapi&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-ORM-D71F00?style=flat)
+![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?style=flat&logo=sqlite&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Beta-1F6FEB?style=flat)
+![License](https://img.shields.io/badge/License-MIT-2EA44F?style=flat)
 
----
+## Overview
 
-# 📊 Status
+LibraryFlow is a web application for library management, designed to manage bibliographic collections and provide a foundation for user, loan, and circulation workflows.
 
-🟢 Em desenvolvimento ativo
+The project originated from an academic command-line application and was later redesigned as a web application using FastAPI. Its development focuses on software architecture, data persistence, system modeling, technical documentation, and incremental delivery.
 
-**Versão Atual:** v0.5.0-beta
+LibraryFlow is currently in beta. The application includes a modular web architecture, complete book management, search capabilities, SQLite persistence, SQLAlchemy integration, an administrative dashboard, and light and dark themes.
 
-O projeto encontra-se em fase beta, com arquitetura consolidada, CRUD completo de livros, documentação técnica formalizada e roadmap definido para os próximos módulos.
+**Current version:** `v0.5.0-beta`
 
----
+## Screenshots
 
-# 📖 Sobre o Projeto
+### Login
 
-O LibraryFlow é uma aplicação web para gerenciamento de bibliotecas, desenvolvida com foco em arquitetura de software, persistência de dados, modelagem de sistemas e boas práticas de engenharia de software.
+![LibraryFlow login interface](static/images/login.png)
 
-O projeto surgiu a partir da evolução de uma aplicação acadêmica originalmente desenvolvida em terminal (CLI), sendo posteriormente reestruturado para uma arquitetura web moderna baseada em FastAPI.
+### Dashboard — Light Theme
 
-Além do desenvolvimento da aplicação, o projeto possui documentação técnica, governança de desenvolvimento, roadmap evolutivo e histórico formal de releases.
+![LibraryFlow dashboard using the light theme](static/images/dashboard-light.png)
 
----
+### Dashboard — Dark Theme
 
-# 🎯 Objetivos
+![LibraryFlow dashboard using the dark theme](static/images/dashboard-dark.png)
 
-* Gerenciar acervos bibliográficos
-* Controlar empréstimos e devoluções
-* Gerenciar usuários da biblioteca
-* Consolidar conhecimentos em desenvolvimento web
-* Aplicar conceitos de arquitetura de software
-* Praticar modelagem e documentação de sistemas
+## Features
 
----
+### Book Management
 
-# 📸 Screenshots
+- Create book records
+- View the book collection
+- Search the book collection
+- Edit book information
+- Delete book records
+- Persist data with SQLite
+- Manage database operations through SQLAlchemy ORM
 
-## 🔐 Tela de Login
+### Interface
 
-![Login](static/images/login.png)
+- Administrative dashboard
+- Light and dark themes
+- Responsive interface
+- Interactive modals
+- Notification system
 
-## ☀️ Dashboard — Tema Claro
+### Application Structure
 
-![Dashboard Light](static/images/dashboard-light.png)
+- FastAPI-based web application
+- SQLAlchemy ORM
+- SQLite database
+- Jinja2 templates
+- Modular organization
+- Defined application layers
 
-## 🌙 Dashboard — Tema Escuro
+## Tech Stack
 
-![Dashboard Dark](static/images/dashboard-dark.png)
+| Area | Technologies |
+| --- | --- |
+| Backend | Python 3.13+, FastAPI |
+| Persistence | SQLAlchemy, SQLite |
+| Templates | Jinja2 |
+| Frontend | HTML5, CSS3, JavaScript |
+| Version Control | Git, GitHub |
 
----
+## Architecture
 
-# ✨ Funcionalidades
-
-## 📚 Gestão de Livros
-
-* Cadastro de livros
-* Consulta de livros
-* Edição de livros
-* Exclusão de livros
-* Persistência em SQLite
-* Integração com SQLAlchemy ORM
-
-## 🎨 Interface
-
-* Tema claro
-* Tema escuro
-* Dashboard administrativo
-* Interface responsiva
-* Modais interativos
-* Sistema de notificações
-
-## ⚙️ Arquitetura
-
-* FastAPI
-* SQLAlchemy ORM
-* SQLite
-* Jinja2 Templates
-* Organização modular
-* Camadas de aplicação definidas
-
----
-
-# 🏗️ Arquitetura
+LibraryFlow follows a layered application structure that separates the web interface, routing, application services, persistence layer, and database.
 
 ```text
-Usuário
-   │
-   ▼
-Templates (Jinja2)
-   │
-   ▼
+User
+  │
+  ▼
+Jinja2 Templates
+  │
+  ▼
 FastAPI Routes
-   │
-   ▼
+  │
+  ▼
 Services Layer
-   │
-   ▼
+  │
+  ▼
 SQLAlchemy ORM
-   │
-   ▼
+  │
+  ▼
 SQLite Database
 ```
 
----
+This separation keeps interface concerns, application logic, and persistence responsibilities organized as the project evolves.
 
-# 🛠️ Tecnologias Utilizadas
+For a detailed description of the architecture, see [`docs/architecture.md`](docs/architecture.md).
 
-## Backend
-
-* Python 3.13+
-* FastAPI
-* SQLAlchemy
-* SQLite
-
-## Frontend
-
-* HTML5
-* CSS3
-* JavaScript
-* Jinja2
-
-## Versionamento
-
-* Git
-* GitHub
-
----
-
-# 📚 Documentação
-
-Toda a documentação técnica do projeto encontra-se disponível em:
+## Project Structure
 
 ```text
-docs/
+LibraryFlow/
+├── app/
+│   ├── database/
+│   ├── models/
+│   ├── routes/
+│   └── services/
+├── database/
+├── docs/
+│   └── use-cases/
+├── static/
+│   ├── css/
+│   ├── images/
+│   └── js/
+├── templates/
+│   └── partials/
+├── main.py
+├── requirements.txt
+└── README.md
 ```
 
-## Documentos Disponíveis
+The project separates application logic, persistence, technical documentation, static resources, and server-rendered templates into dedicated directories.
 
-* Architecture Documentation
-* Requirements Documentation
-* Business Rules Documentation
-* Use Cases Documentation
-* Database Documentation
-* API Documentation
-* Design Documentation
-* Setup Guide
-* Troubleshooting Guide
-* Changelog
-* Contribution Guidelines
-* Product Roadmap
+## Getting Started
+
+LibraryFlow requires Python 3.13 or newer.
+
+Clone the repository:
+
+```bash
+git clone https://github.com/arthurcfranklin/libraryflow.git
+cd libraryflow
+```
+
+Create and activate a virtual environment, then install the project dependencies according to the repository configuration.
+
+Detailed environment and setup instructions are available in [`docs/setup.md`](docs/setup.md).
+
+## Documentation
+
+Technical documentation is maintained in [`docs/`](docs/) and evolves alongside the application.
+
+| Document | Description |
+| --- | --- |
+| [Architecture](docs/architecture.md) | Application architecture and structural decisions |
+| [Requirements](docs/requirements.md) | Functional and non-functional requirements |
+| [Business Rules](docs/business-rules.md) | Business rules implemented by the system |
+| [Use Cases](docs/use-cases/use-cases.md) | System use cases and related workflows |
+| [Database](docs/database.md) | Data model and persistence documentation |
+| [API](docs/api.md) | API and application interface documentation |
+| [Design](docs/design.md) | Interface and design specifications |
+| [Setup](docs/setup.md) | Development environment and application setup |
+| [Troubleshooting](docs/troubleshooting.md) | Known issues and troubleshooting procedures |
+| [Changelog](docs/changelog.md) | Project change history |
+| [Roadmap](docs/roadmap.md) | Planned project evolution |
+| [Contributing](docs/contributing.md) | Development and contribution guidelines |
+
+## Releases
+
+| Version | Milestone |
+| --- | --- |
+| `v0.1.0-alpha` | Initial Web Architecture |
+| `v0.2.0-alpha` | Dashboard and Theme System |
+| `v0.3.0-alpha` | Books Management Foundation |
+| `v0.4.0-beta` | Complete Books CRUD |
+| `v0.5.0-beta` | Documentation and Governance Framework |
+
+## Roadmap
+
+### Completed
+
+- [x] Web architecture
+- [x] Administrative dashboard
+- [x] Theme system
+- [x] Complete books CRUD
+- [x] SQLite persistence
+- [x] SQLAlchemy integration
+- [x] Modular application structure
+- [x] Technical documentation
+- [x] Release workflow
+- [x] Project governance
+
+### `v0.6.0-beta` — Users Management
+
+- [ ] Create users
+- [ ] View users
+- [ ] Edit users
+- [ ] Delete users
+
+### `v0.7.0-beta` — Loans Management
+
+- [ ] Loans
+- [ ] Returns
+- [ ] Availability control
+
+### `v0.8.0-beta` — Authentication
+
+- [ ] Authentication
+- [ ] Session management
+- [ ] Route protection
+
+### `v0.9.0-beta` — Administration
+
+- [ ] Administrative reports
+- [ ] Audit capabilities
+- [ ] Management features
+
+### `v1.0.0`
+
+- [ ] Stable release
+
+## License
+
+LibraryFlow is distributed under the [MIT License](LICENSE).
 
 ---
 
-# 🚀 Releases
-
-| Versão       | Descrição                              |
-| ------------ | -------------------------------------- |
-| v0.1.0-alpha | Initial Web Architecture               |
-| v0.2.0-alpha | Dashboard and Theme System             |
-| v0.3.0-alpha | Books Management Foundation            |
-| v0.4.0-beta  | Complete Books CRUD                    |
-| v0.5.0-beta  | Documentation and Governance Framework |
-
----
-
-# 🗺️ Roadmap
-
-## ✅ Concluído
-
-* Arquitetura Web
-* Dashboard Administrativo
-* Sistema de Temas
-* CRUD Completo de Livros
-* Persistência SQLite
-* Integração SQLAlchemy
-* Estrutura Modular
-* Documentação Técnica Completa
-* Sistema de Releases
-* Governança do Projeto
-
-## 🚧 Próxima Versão — v0.6.0-beta
-
-### Users Management Module
-
-* Cadastro de usuários
-* Consulta de usuários
-* Edição de usuários
-* Exclusão de usuários
-
-## 🔮 Futuras Versões
-
-### v0.7.0-beta
-
-* Empréstimos
-* Devoluções
-* Controle de disponibilidade
-
-### v0.8.0-beta
-
-* Autenticação
-* Controle de sessão
-* Proteção de rotas
-
-### v0.9.0-beta
-
-* Relatórios administrativos
-* Funcionalidades de auditoria
-* Recursos de gestão
-
-### v1.0.0
-
-* Stable Release
-
----
+Developed by **Arthur Franklin** · [Português](README.pt-BR.md) · [MIT License](LICENSE)
